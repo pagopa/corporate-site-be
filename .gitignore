@@ -68,8 +68,6 @@ web/wp
 .env
 !.env.example
 
-auth.json
-
 # Composer
 /vendor
 
