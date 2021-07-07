@@ -65,8 +65,7 @@ web/.htaccess
 *.log
 
 # Dotenv
-.env.local
-.env.local
+.env
 !.env.example
 
 # Composer
