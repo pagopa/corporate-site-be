@@ -1,0 +1,330 @@
+{
+    "key": "group_60db100597751",
+    "title": "Body components",
+    "fields": [
+        {
+            "key": "field_60db102de02f8",
+            "label": "Body",
+            "name": "body",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acf_collector_add_field_to_plugin": 1,
+            "acf_collector_is_output_filtered": 1,
+            "show_in_graphql": 1,
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_60db395536251",
+                    "label": "Body blocks",
+                    "name": "body_blocks",
+                    "type": "flexible_content",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acf_collector_add_field_to_plugin": 1,
+                    "acf_collector_is_output_filtered": 0,
+                    "show_in_graphql": 1,
+                    "layouts": {
+                        "layout_60db39692845e": {
+                            "key": "layout_60db39692845e",
+                            "name": "hero_slider",
+                            "label": "Hero slider",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60db398e36252",
+                                    "label": "Hero slider",
+                                    "name": "hero_slider",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acf_collector_add_field_to_plugin": 0,
+                                    "acf_collector_is_output_filtered": 0,
+                                    "clone": [
+                                        "group_60daf78e3c555"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60db3c2e5e06e": {
+                            "key": "layout_60db3c2e5e06e",
+                            "name": "editorial_box",
+                            "label": "Editorial box",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60db3c475e06f",
+                                    "label": "Editorial box",
+                                    "name": "editorial_box",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acf_collector_add_field_to_plugin": 0,
+                                    "acf_collector_is_output_filtered": 0,
+                                    "clone": [
+                                        "group_60dafca4092fc"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60dc995f39757": {
+                            "key": "layout_60dc995f39757",
+                            "name": "media_box",
+                            "label": "Media box",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60dc997039758",
+                                    "label": "Media Box",
+                                    "name": "media_box",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "clone": [
+                                        "group_60dc985f3f702"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60dda03845787": {
+                            "key": "layout_60dda03845787",
+                            "name": "text_big",
+                            "label": "Text big",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60dda05845788",
+                                    "label": "Text big",
+                                    "name": "text_big",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "clone": [
+                                        "group_60dd9f088995f"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60ddb02a1f523": {
+                            "key": "layout_60ddb02a1f523",
+                            "name": "post_list",
+                            "label": "Post list",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60df352e62bf6",
+                                    "label": "Post list",
+                                    "name": "post_list",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "clone": [
+                                        "group_60df32a36b84d"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60df372d8b78d": {
+                            "key": "layout_60df372d8b78d",
+                            "name": "post_slider",
+                            "label": "Post slider",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60df37328b78e",
+                                    "label": "Post slider",
+                                    "name": "post_slider",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "clone": [
+                                        "group_60df357297765"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60df387f6762f": {
+                            "key": "layout_60df387f6762f",
+                            "name": "box_cta",
+                            "label": "Box CTA",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60df388467630",
+                                    "label": "Box CTA",
+                                    "name": "box_cta",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "clone": [
+                                        "group_60df37757b135"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60df39baa97b4": {
+                            "key": "layout_60df39baa97b4",
+                            "name": "banner_newsletter",
+                            "label": "Banner newsletter",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60df39c8a97b5",
+                                    "label": "Banner newsletter",
+                                    "name": "banner_newsletter",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "clone": [
+                                        "group_60df38ae52aa3"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        }
+                    },
+                    "button_label": "Aggiungi Riga",
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_graphql": 1,
+    "graphql_field_name": "flexibleContent",
+    "map_graphql_types_from_location_rules": 0,
+    "graphql_types": "",
+    "modified": 1625242106
+}
