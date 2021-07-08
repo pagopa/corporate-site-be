@@ -1,0 +1,97 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+#Create a unique name for the build based on your project requirements
+#BuildID is the unique ID for the build
+name: $(Year:yy).$(Month).$(DayOfMonth).$(BuildID)-$(SourceBranchName)
+
+variables:
+  AgentImage: "ubuntu-latest" #See available agent images: https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops#use-a-microsoft-hosted-agent
+  BuildConfiguration: 'Release'
+
+stages:
+- stage: 'Build_Stage' #Stage name cannot have spaces
+  displayName: 'Build' #Name displayed when viewing in Azure DevOps
+  jobs:
+  - job: 'Build_Job' #Job name cannot have spaces
+    displayName: 'Application Build' #Name displayed when viewing in Azure DevOps
+    pool:
+      vmImage: $(AgentImage)
+    steps:
+    - task: DownloadSecureFile@1
+      name: envFile
+      inputs:
+        secureFile: '.env'
+    - task: CopyFiles@2
+      inputs:
+        contents: "$(envFile.secureFilePath)"
+        targetFolder: "."
+        cleanTargetFolder: true
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'ppareg'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
+    - task: AzureCLI@2
+      displayName: Azure CLI
+      inputs:
+        azureSubscription: azure
+        scriptType: bash
+        scriptLocation: inlineScript
+        inlineScript: |
+          az --version
+          az account show
+    # - task: CopyFiles@2
+    #   inputs:
+    #     sourceFolder: "public"
+    #     contents: "**"
+    #     targetFolder: "$(Build.ArtifactStagingDirectory)"
+    #     cleanTargetFolder: true
+    #   displayName: "Copy built site"
+    #   condition: succeeded()
+    # - task: PublishBuildArtifacts@1
+    #   inputs:
+    #     PathtoPublish: "$(Build.ArtifactStagingDirectory)"
+    #     ArtifactName: "app"
+    #     publishLocation: "Container"
+    #   condition: succeeded()
+    #   displayName: "Publish Build Artifacts"
+
+# - stage: 'Staging' #Stage name cannot have spaces
+#   displayName: 'Staging' #Name displayed when viewing in Azure DevOps
+#   dependsOn: ['Build_Stage'] #List of previous stages that must complete before this stage runs
+#   jobs:
+#   - deployment: Deploy_Staging
+#     displayName: Staging Deployment
+#     pool:
+#       vmImage: $(AgentImage)
+#     environment: Staging
+#     strategy:
+#       runOnce:
+#         deploy:
+#           steps:
+#           - download: current
+#             artifact: 'app'
+
+# - stage: 'Production'
+#   displayName: 'Production'
+#   dependsOn: ['Build_Stage', 'Staging']
+#   condition: eq(variables['Build.Reason'], 'Manual')
+#   jobs:
+#   - deployment: Deploy_Production
+#     displayName: Production Deployment
+#     pool:
+#       vmImage: $(AgentImage)
+#     environment: Production
+#     strategy:
+#       runOnce:
+#         deploy:
+#           steps:
+#           - download: current
+#             artifact: 'app'
+        

@@ -1,0 +1,16 @@
+version: "3"
+    
+services:
+  wordpress:
+    build: .
+    ports:
+      - "8080:80"
+    environment: 
+      - DB_NAME='database_name'
+      - DB_USER='database_user'
+      - DB_PASSWORD='database_password'
+      - DB_HOST='localhost'
+      - DB_PREFIX='wp_'
+      - WP_ENV='development'
+      - WP_HOME='http://localhost'
+      - WP_SITEURL="http://localhost/wp"
