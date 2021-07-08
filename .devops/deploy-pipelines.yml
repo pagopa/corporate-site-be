@@ -11,21 +11,22 @@ trigger:
 name: $(Year:yy).$(Month).$(DayOfMonth).$(BuildID)-$(SourceBranchName)
 
 variables:
-  AgentImage: "ubuntu-latest" #See available agent images: https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops#use-a-microsoft-hosted-agent
+  AgentImage: "ubuntu-latest"
   BuildConfiguration: 'Release'
-  # Container registry service connection established during pipeline creation
+  azureSubscription: 'azuresub'
   dockerRegistryServiceConnection: 'fc6c9de1-c6d8-4dec-b092-d9d2323beb85'
   imageRepository: 'corporatesitebe'
   containerRegistry: 'ppareg.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
+  webAppName: 'webappname'
   tag: '$(Build.BuildId)'
 
 stages:
-- stage: 'Build_Stage' #Stage name cannot have spaces
-  displayName: 'Build' #Name displayed when viewing in Azure DevOps
+- stage: 'Build_Stage'
+  displayName: 'Build'
   jobs:
-  - job: 'Build_Job' #Job name cannot have spaces
-    displayName: 'Application Build' #Name displayed when viewing in Azure DevOps
+  - job: 'Build_Job'
+    displayName: 'Application Build'
     pool:
       vmImage: $(AgentImage)
     steps:
@@ -48,46 +49,25 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-    - task: AzureCLI@2
-      displayName: Azure CLI
-      inputs:
-        azureSubscription: azure
-        scriptType: bash
-        scriptLocation: inlineScript
-        inlineScript: |
-          az --version
-          az account show
-    # - task: CopyFiles@2
-    #   inputs:
-    #     sourceFolder: "public"
-    #     contents: "**"
-    #     targetFolder: "$(Build.ArtifactStagingDirectory)"
-    #     cleanTargetFolder: true
-    #   displayName: "Copy built site"
-    #   condition: succeeded()
-    # - task: PublishBuildArtifacts@1
-    #   inputs:
-    #     PathtoPublish: "$(Build.ArtifactStagingDirectory)"
-    #     ArtifactName: "app"
-    #     publishLocation: "Container"
-    #   condition: succeeded()
-    #   displayName: "Publish Build Artifacts"
 
-# - stage: 'Staging' #Stage name cannot have spaces
-#   displayName: 'Staging' #Name displayed when viewing in Azure DevOps
-#   dependsOn: ['Build_Stage'] #List of previous stages that must complete before this stage runs
-#   jobs:
-#   - deployment: Deploy_Staging
-#     displayName: Staging Deployment
-#     pool:
-#       vmImage: $(AgentImage)
-#     environment: Staging
-#     strategy:
-#       runOnce:
-#         deploy:
-#           steps:
-#           - download: current
-#             artifact: 'app'
+- stage: 'Staging'
+  displayName: 'Staging'
+  dependsOn: ['Build_Stage']
+  jobs:
+  - deployment: Deploy_Staging
+    displayName: Staging Deployment
+    pool:
+      vmImage: $(AgentImage)
+    environment: Staging
+    strategy:
+      runOnce:
+        deploy:
+         steps:
+         - task: AzureWebAppContainer@1
+           inputs:
+             appName: $(webAppName)
+             azureSubscription: $(azureSubscription)
+             imageName: '$(containerRegistry)/$(imageRepository):$(tag)'
 
 # - stage: 'Production'
 #   displayName: 'Production'
