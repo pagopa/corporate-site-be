@@ -36,8 +36,7 @@ stages:
     - task: CopyFiles@2
       inputs:
         contents: "$(envFile.secureFilePath)"
-        targetFolder: "."
-        cleanTargetFolder: true
+        targetFolder: "$(Build.SourcesDirectory)"
     - task: Docker@2
       displayName: Build and push an image to container registry
       inputs:
