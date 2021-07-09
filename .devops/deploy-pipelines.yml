@@ -67,7 +67,9 @@ stages:
          - task: Bash@3
            inputs:
              targetType: 'inline'
-             script: 'printenv'
+             script: |
+              printenv
+              echo '$(ContainerRegistry)/$(ImageRepository):$(Tag)'
          - task: AzureWebAppContainer@1
            inputs:
              appName: $(WebAppName)
