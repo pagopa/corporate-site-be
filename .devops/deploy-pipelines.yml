@@ -17,7 +17,7 @@ variables:
   ImageRepository: '$(IMAGE_REPOSITORY)'
   ContainerRegistry: '$(CONTAINER_REGISTRY)'
   DockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  WebAppName: 'ppacorpsite-cms'
+  WebAppName: '$(WEBAPP_NAME)'
   Tag: '$(Build.BuildId)'
 
 stages:
