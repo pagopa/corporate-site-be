@@ -10,16 +10,16 @@ trigger:
 #BuildID is the unique ID for the build
 name: $(Year:yy).$(Month).$(DayOfMonth).$(BuildID)-$(SourceBranchName)
 
+# variables set on azdevops to avoid circular dependency warning
+# $(BLOB_CONTAINER_NAME)
 variables:
   AgentImage: "ubuntu-latest"
-  BuildConfiguration: 'Release'
-  azureSubscription: 'azuresub'
-  dockerRegistryServiceConnection: 'fc6c9de1-c6d8-4dec-b092-d9d2323beb85'
-  imageRepository: 'corporatesitebe'
-  containerRegistry: 'ppareg.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  webAppName: 'webappname'
-  tag: '$(Build.BuildId)'
+  DockerRegistryServiceConnection: '$(DOCKER_REGISTRY_SERVICE_CONNECTION)'
+  ImageRepository: '$(IMAGE_REPOSITORY)'
+  ContainerRegistry: '$(CONTAINER_REGISTRY)'
+  DockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
+  WebAppName: 'ppacorpsite-cms'
+  Tag: '$(Build.BuildId)'
 
 stages:
 - stage: 'Build_Stage'
@@ -44,30 +44,30 @@ stages:
       displayName: Build and push an image to container registry
       inputs:
         command: buildAndPush
-        repository: $(imageRepository)
-        dockerfile: $(dockerfilePath)
-        containerRegistry: $(dockerRegistryServiceConnection)
+        repository: $(ImageRepository)
+        dockerfile: $(DockerfilePath)
+        containerRegistry: $(DockerRegistryServiceConnection)
         tags: |
-          $(tag)
+          $(Tag)
 
-- stage: 'Staging'
-  displayName: 'Staging'
+- stage: 'UAT'
+  displayName: 'UAT'
   dependsOn: ['Build_Stage']
   jobs:
-  - deployment: Deploy_Staging
-    displayName: Staging Deployment
+  - deployment: Deploy_Uat
+    displayName: UAT Deployment
     pool:
       vmImage: $(AgentImage)
-    environment: Staging
+    environment: UAT
     strategy:
       runOnce:
         deploy:
          steps:
          - task: AzureWebAppContainer@1
            inputs:
-             appName: $(webAppName)
-             azureSubscription: $(azureSubscription)
-             imageName: '$(containerRegistry)/$(imageRepository):$(tag)'
+             appName: $(WebAppName)
+             azureSubscription: $(UAT_AZURE_SUBSCRIPTION)
+             imageName: '$(ContainerRegistry)/$(ImageRepository):$(Tag)'
 
 # - stage: 'Production'
 #   displayName: 'Production'
