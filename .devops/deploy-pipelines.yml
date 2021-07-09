@@ -11,7 +11,6 @@ trigger:
 name: $(Year:yy).$(Month).$(DayOfMonth).$(BuildID)-$(SourceBranchName)
 
 # variables set on azdevops to avoid circular dependency warning
-# $(BLOB_CONTAINER_NAME)
 variables:
   AgentImage: "ubuntu-latest"
   DockerRegistryServiceConnection: '$(DOCKER_REGISTRY_SERVICE_CONNECTION)'
@@ -59,10 +58,16 @@ stages:
     pool:
       vmImage: $(AgentImage)
     environment: UAT
+    variables:
+    - group: 'CMS_UAT'
     strategy:
       runOnce:
         deploy:
          steps:
+         - task: Bash@3
+           inputs:
+             targetType: 'inline'
+             script: 'printenv'
          - task: AzureWebAppContainer@1
            inputs:
              appName: $(WebAppName)
