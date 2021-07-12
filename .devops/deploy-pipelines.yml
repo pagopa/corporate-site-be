@@ -86,5 +86,5 @@ stages:
          - task: AzureWebAppContainer@1
            inputs:
              appName: $(WebAppName)
-             azureSubscription: $(AzureSubscription)
+             azureSubscription: '$(AzureSubscription)'
              imageName: '$(ContainerRegistry)/$(ImageRepository):$(Tag)'
