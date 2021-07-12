@@ -10,18 +10,36 @@ trigger:
 #BuildID is the unique ID for the build
 name: $(Year:yy).$(Month).$(DayOfMonth).$(BuildID)-$(SourceBranchName)
 
+parameters:
+  - name: environment
+    displayName: Target Environment
+    type: string
+    default: uat
+    values:
+      - uat
+      - prod
+
 # variables set on azdevops to avoid circular dependency warning
+# $(BLOB_CONTAINER_NAME)
 variables:
   AgentImage: "ubuntu-latest"
-  DockerRegistryServiceConnection: '$(DOCKER_REGISTRY_SERVICE_CONNECTION)'
-  ImageRepository: '$(IMAGE_REPOSITORY)'
-  ContainerRegistry: '$(CONTAINER_REGISTRY)'
   DockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  WebAppName: '$(WEBAPP_NAME)'
   Tag: '$(Build.BuildId)'
+  ${{ if eq(parameters['environment'], 'uat') }}:
+    DockerRegistryServiceConnection: '$(UAT_DOCKER_REGISTRY_SERVICE_CONNECTION)'
+    ImageRepository: '$(UAT_IMAGE_REPOSITORY)'
+    ContainerRegistry: '$(UAT_CONTAINER_REGISTRY)'
+    WebAppName: '$(UAT_WEBAPP_NAME)'
+    AzureSubscription: '$(UAT_AZURE_SUBSCRIPTION)'
+  ${{ if eq(parameters['environment'], 'prod') }}:
+    DockerRegistryServiceConnection: '$(PROD_DOCKER_REGISTRY_SERVICE_CONNECTION)'
+    ImageRepository: '$(PROD_IMAGE_REPOSITORY)'
+    ContainerRegistry: '$(PROD_CONTAINER_REGISTRY)'
+    WebAppName: '$(PROD_WEBAPP_NAME)'
+    AzureSubscription: '$(PROD_AZURE_SUBSCRIPTION)'
 
 stages:
-- stage: 'Build_Stage'
+- stage: 'Build'
   displayName: 'Build'
   jobs:
   - job: 'Build_Job'
@@ -33,7 +51,6 @@ stages:
       name: envFile
       inputs:
         secureFile: '.env'
-  
     - task: CopyFiles@2
       inputs:
         SourceFolder: '$(Agent.TempDirectory)'
@@ -49,17 +66,15 @@ stages:
         tags: |
           $(Tag)
 
-- stage: 'UAT'
+- stage: 'Deploy_to_${{parameters.environment}}'
   displayName: 'UAT'
-  dependsOn: ['Build_Stage']
+  dependsOn: ['Build']
   jobs:
-  - deployment: Deploy_Uat
-    displayName: UAT Deployment
+  - deployment: Deploy
+    displayName: Deploy
     pool:
       vmImage: $(AgentImage)
-    environment: UAT
-    variables:
-    - group: 'CMS_UAT'
+    environment: ${{parameters.environment}}
     strategy:
       runOnce:
         deploy:
@@ -67,29 +82,9 @@ stages:
          - task: Bash@3
            inputs:
              targetType: 'inline'
-             script: |
-              printenv
-              echo '$(ContainerRegistry)/$(ImageRepository):$(Tag)'
+             script: 'printenv'
          - task: AzureWebAppContainer@1
            inputs:
              appName: $(WebAppName)
-             azureSubscription: $(UAT_AZURE_SUBSCRIPTION)
+             azureSubscription: $(AZURE_SUBSCRIPTION)
              imageName: '$(ContainerRegistry)/$(ImageRepository):$(Tag)'
-
-# - stage: 'Production'
-#   displayName: 'Production'
-#   dependsOn: ['Build_Stage', 'Staging']
-#   condition: eq(variables['Build.Reason'], 'Manual')
-#   jobs:
-#   - deployment: Deploy_Production
-#     displayName: Production Deployment
-#     pool:
-#       vmImage: $(AgentImage)
-#     environment: Production
-#     strategy:
-#       runOnce:
-#         deploy:
-#           steps:
-#           - download: current
-#             artifact: 'app'
-        
