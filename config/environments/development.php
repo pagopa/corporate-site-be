@@ -17,3 +17,8 @@ ini_set('display_errors', '0');
 
 // Enable plugin and theme updates and installation from the admin
 Config::define('DISALLOW_FILE_MODS', false);
+
+if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false)
+   $_SERVER['HTTPS']='on';
+else
+   $_SERVER['HTTPS']='off';
