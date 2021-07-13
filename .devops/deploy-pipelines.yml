@@ -24,17 +24,17 @@ variables:
   DOCKERFILE_PATH: '$(Build.SourcesDirectory)/Dockerfile'
   TAG: '$(Build.BuildId)'
   ${{ if eq(parameters['environment'], 'uat') }}:
-    DOCKER_REGISTRY_SERVICE_CONNECTION: '$(UAT_DOCKER_REGISTRY_SERVICE_CONNECTION)'
-    IMAGE_REPOSITORY: '$(UAT_IMAGE_REPOSITORY)'
-    CONTAINER_REGISTRY: '$(UAT_CONTAINER_REGISTRY)'
-    WEBAPP_NAME: '$(UAT_WEBAPP_NAME)'
+    DOCKER_REGISTRY_SERVICE_CONNECTION: $(UAT_DOCKER_REGISTRY_SERVICE_CONNECTION)
+    IMAGE_REPOSITORY: $(UAT_IMAGE_REPOSITORY)
+    CONTAINER_REGISTRY: $(UAT_CONTAINER_REGISTRY)
+    WEBAPP_NAME: $(UAT_WEBAPP_NAME)
     AZURE_SUBSCRIPTION: $(UAT_AZURE_SUBSCRIPTION)
   ${{ if eq(parameters['environment'], 'prod') }}:
-    DOCKER_REGISTRY_SERVICE_CONNECTION: '$(PROD_DOCKER_REGISTRY_SERVICE_CONNECTION)'
-    IMAGE_REPOSITORY: '$(PROD_IMAGE_REPOSITORY)'
-    CONTAINER_REGISTRY: '$(PROD_CONTAINER_REGISTRY)'
-    WEBAPP_NAME: '$(PROD_WEBAPP_NAME)'
-    AZURE_SUBSCRIPTION: '$(PROD_AZURE_SUBSCRIPTION)'
+    DOCKER_REGISTRY_SERVICE_CONNECTION: $(PROD_DOCKER_REGISTRY_SERVICE_CONNECTION)
+    IMAGE_REPOSITORY: $(PROD_IMAGE_REPOSITORY)
+    CONTAINER_REGISTRY: $(PROD_CONTAINER_REGISTRY)
+    WEBAPP_NAME: $(PROD_WEBAPP_NAME)
+    AZURE_SUBSCRIPTION: $(PROD_AZURE_SUBSCRIPTION)
 
 stages:
 - stage: 'Build'
@@ -58,11 +58,11 @@ stages:
       displayName: Build and push an image to container registry
       inputs:
         command: buildAndPush
-        repository: $(IMAGE_REPOSITORY)
-        dockerfile: $(DOCKERFILE_PATH)
-        containerRegistry: $(DOCKER_REGISTRY_SERVICE_CONNECTION)
+        repository: '$(IMAGE_REPOSITORY)'
+        dockerfile: '$(DOCKERFILE_PATH)'
+        containerRegistry: '$(DOCKER_REGISTRY_SERVICE_CONNECTION)'
         tags: |
-          $(Tag)
+          $(TAG)
 
 - stage: 'Deploy_to_${{parameters.environment}}'
   displayName: 'UAT'
@@ -83,6 +83,6 @@ stages:
              script: 'printenv'
          - task: AzureWebAppContainer@1
            inputs:
-             appName: $(WEBAPP_NAME)
+             appName: '$(WEBAPP_NAME)'
              azureSubscription: '$(AZURE_SUBSCRIPTION)'
              imageName: '$(CONTAINER_REGISTRY)/$(IMAGE_REPOSITORY):$(TAG)'
