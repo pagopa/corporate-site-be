@@ -81,8 +81,4 @@ stages:
            inputs:
              targetType: 'inline'
              script: 'printenv'
-         - task: AzureWebAppContainer@1
-           inputs:
-             appName: '$(WEBAPP_NAME)'
-             azureSubscription: '$(AZURE_SUBSCRIPTION)'
-             imageName: '$(CONTAINER_REGISTRY)/$(IMAGE_REPOSITORY):$(TAG)'
+         
