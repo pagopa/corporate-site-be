@@ -64,13 +64,22 @@ stages:
         tags: |
           $(TAG)
 
-    - task: Bash@3
-      inputs:
-        targetType: 'inline'
-        script: 'printenv'
-    - task: AzureWebAppContainer@1
-      inputs:
-        appName: '$(WEBAPP_NAME)'
-        azureSubscription: '$(AZURE_SUBSCRIPTION)'
-        imageName: '$(CONTAINER_REGISTRY)/$(IMAGE_REPOSITORY):$(TAG)'
-         
+- stage: 'Deploy_to_${{parameters.environment}}'
+  dependsOn: ['Build']
+  jobs:
+  - deployment: Deploy
+    pool:
+      vmImage: $(AGENT_IMAGE)
+    strategy:
+      runOnce:
+        deploy:
+         steps:
+         - task: Bash@3
+           inputs:
+             targetType: 'inline'
+             script: 'printenv'
+         - task: AzureWebAppContainer@1
+           inputs:
+             appName: $(WEBAPP_NAME)
+             azureSubscription: '$(AZURE_SUBSCRIPTION)'
+             imageName: '$(CONTAINER_REGISTRY)/$(IMAGE_REPOSITORY):$(TAG)'
