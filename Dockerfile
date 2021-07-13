@@ -44,9 +44,10 @@ RUN a2enmod rewrite \
 
 COPY composer.json ./
 ADD .env .
+ADD auth.json .
 RUN set -eux; \
 	composer install --prefer-dist --no-dev --no-scripts --no-progress
-RUN rm .env
+RUN rm .env auth.json
 
 COPY --chown=www-data:www-data . /var/www/html
 WORKDIR /var/www/html
