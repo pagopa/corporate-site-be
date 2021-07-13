@@ -30,7 +30,7 @@ variables:
     ImageRepository: '$(UAT_IMAGE_REPOSITORY)'
     ContainerRegistry: '$(UAT_CONTAINER_REGISTRY)'
     WebAppName: '$(UAT_WEBAPP_NAME)'
-    AzureSubscription: 'azure'
+    AzureSubscription: $(UAT_AZURE_SUBSCRIPTION)
   ${{ if eq(parameters['environment'], 'prod') }}:
     DockerRegistryServiceConnection: '$(PROD_DOCKER_REGISTRY_SERVICE_CONNECTION)'
     ImageRepository: '$(PROD_IMAGE_REPOSITORY)'
