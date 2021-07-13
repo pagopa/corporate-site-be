@@ -10,14 +10,14 @@ trigger:
 #BuildID is the unique ID for the build
 name: $(Year:yy).$(Month).$(DayOfMonth).$(BuildID)-$(SourceBranchName)
 
-#parameters:
-#  - name: environment
-#    displayName: Target Environment
-#    type: string
-#    default: uat
-#    values:
-#      - uat
-#      - prod
+parameters:
+  - name: environment
+    displayName: Target Environment
+    type: string
+    default: uat
+    values:
+      - uat
+      - prod
 
 # variables set on azdevops to avoid circular dependency warning
 # $(BLOB_CONTAINER_NAME)
