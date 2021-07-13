@@ -10,27 +10,25 @@ trigger:
 #BuildID is the unique ID for the build
 name: $(Year:yy).$(Month).$(DayOfMonth).$(BuildID)-$(SourceBranchName)
 
-#parameters:
-#  - name: environment
-#    displayName: Target Environment
-#    type: string
-#    default: uat
-#    values:
-#      - uat
-#      - prod
+parameters:
+  - name: environment
+    displayName: Target Environment
+    type: string
+    default: uat
+    values:
+      - uat
+      - prod
 
-# variables set on azdevops to avoid circular dependency warning
-# $(BLOB_CONTAINER_NAME)
 variables:
-  AgentImage: "ubuntu-latest"
-  DockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  Tag: '$(Build.BuildId)'
+  AGENT_IMAGE: "ubuntu-latest"
+  DOCKERFILE_PATH: '$(Build.SourcesDirectory)/Dockerfile'
+  TAG: '$(Build.BuildId)'
   #${{ if eq(parameters['environment'], 'uat') }}:
-  DockerRegistryServiceConnection: '$(UAT_DOCKER_REGISTRY_SERVICE_CONNECTION)'
-  ImageRepository: '$(UAT_IMAGE_REPOSITORY)'
-  ContainerRegistry: '$(UAT_CONTAINER_REGISTRY)'
-  WebAppName: '$(UAT_WEBAPP_NAME)'
-  AzureSubscription: '$(UAT_AZURE_SUBSCRIPTION)'
+  DOCKER_REGISTRY_SERVICE_CONNECTION: '$(UAT_DOCKER_REGISTRY_SERVICE_CONNECTION)'
+  IMAGE_REPOSITORY: '$(UAT_IMAGE_REPOSITORY)'
+  CONTAINER_REGISTRY: '$(UAT_CONTAINER_REGISTRY)'
+  WEBAPP_NAME: '$(UAT_WEBAPP_NAME)'
+  AZURE_SUBSCRIPTION: '$(UAT_AZURE_SUBSCRIPTION)'
   #${{ if eq(parameters['environment'], 'prod') }}:
   #  DockerRegistryServiceConnection: '$(PROD_DOCKER_REGISTRY_SERVICE_CONNECTION)'
   #  ImageRepository: '$(PROD_IMAGE_REPOSITORY)'
@@ -45,7 +43,7 @@ stages:
   - job: 'Build_Job'
     displayName: 'Application Build'
     pool:
-      vmImage: $(AgentImage)
+      vmImage: $(AGENT_IMAGE)
     steps:
     - task: DownloadSecureFile@1
       name: envFile
@@ -60,21 +58,21 @@ stages:
       displayName: Build and push an image to container registry
       inputs:
         command: buildAndPush
-        repository: $(ImageRepository)
-        dockerfile: $(DockerfilePath)
-        containerRegistry: $(DockerRegistryServiceConnection)
+        repository: $(IMAGE_REPOSITORY)
+        dockerfile: $(DOCKERFILE_PATH)
+        containerRegistry: $(DOCKER_REGISTRY_SERVICE_CONNECTION)
         tags: |
           $(Tag)
 
-- stage: 'Deploy_to' #_${{parameters.environment}}'
+- stage: 'Deploy_to_${{parameters.environment}}'
   displayName: 'UAT'
   dependsOn: ['Build']
   jobs:
   - deployment: Deploy
     displayName: Deploy
     pool:
-      vmImage: $(AgentImage)
-    environment: 'UAT'#${{parameters.environment}}
+      vmImage: $(AGENT_IMAGE)
+    environment: ${{parameters.environment}}
     strategy:
       runOnce:
         deploy:
@@ -85,6 +83,6 @@ stages:
              script: 'printenv'
          - task: AzureWebAppContainer@1
            inputs:
-             appName: $(WebAppName)
-             azureSubscription: '$(AzureSubscription)'
-             imageName: '$(ContainerRegistry)/$(ImageRepository):$(Tag)'
+             appName: $(WEBAPP_NAME)
+             azureSubscription: '$(AZURE_SUBSCRIPTION)'
+             imageName: '$(CONTAINER_REGISTRY)/$(IMAGE_REPOSITORY):$(TAG)'
