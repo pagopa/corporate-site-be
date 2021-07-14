@@ -26,7 +26,8 @@
             },
             "templates": [
                 "homepage",
-                "work-with-us"
+                "work-with-us",
+                "visual-assets"
             ]
         }
     }
