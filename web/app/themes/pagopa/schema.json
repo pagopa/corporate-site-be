@@ -1,0 +1,41 @@
+{
+    "component": [],
+    "menu": [
+        {
+            "location": "main-menu",
+            "name": "Main Menu",
+            "description": "Main Menu"
+        },
+        {
+            "location": "menu-right",
+            "name": "Menu Right",
+            "description": "Links on top right of header"
+        },
+        {
+            "location": "contacts",
+            "name": "Contacts",
+            "description": "Contacts"
+        },
+        {
+            "location": "end-footer",
+            "name": "End Footer",
+            "description": "Links on end of footer"
+        }
+    ],
+    "page": [
+        {
+            "name": "Homepage"
+        },
+        {
+            "name": "Work With Us"
+        },
+        {
+            "name": "Visual Assets"
+        }
+    ],
+    "post-type": [],
+    "service": [],
+    "shortcode": [],
+    "taxonomy": [],
+    "term": []
+}
