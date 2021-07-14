@@ -15,5 +15,12 @@ Config::define('ACF_JSON_AUTOSAVE', true);
 
 ini_set('display_errors', '0');
 
-// Enable plugin and theme updates and installation from the admin
-Config::define('DISALLOW_FILE_MODS', false);
+/** Force SSL Connection to Azure Database for MySQL server */
+Config::define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL);
+Config::define('MYSQL_SSL_CA', getenv('MYSQL_SSL_CA'));
+Config::define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL | MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT );
+
+if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false)
+   $_SERVER['HTTPS']='on';
+else
+   $_SERVER['HTTPS']='off';

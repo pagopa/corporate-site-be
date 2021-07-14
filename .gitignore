@@ -68,6 +68,8 @@ web/.htaccess
 .env
 !.env.example
 
+auth.json
+
 # Composer
 /vendor
 

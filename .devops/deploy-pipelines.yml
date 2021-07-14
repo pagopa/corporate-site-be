@@ -10,88 +10,77 @@ trigger:
 #BuildID is the unique ID for the build
 name: $(Year:yy).$(Month).$(DayOfMonth).$(BuildID)-$(SourceBranchName)
 
+parameters:
+  - name: environment
+    displayName: Target Environment
+    type: string
+    default: uat
+    values:
+      - uat
+      - prod
+
 variables:
-  AgentImage: "ubuntu-latest" #See available agent images: https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops#use-a-microsoft-hosted-agent
-  BuildConfiguration: 'Release'
+  AGENT_IMAGE: "ubuntu-latest"
+  DOCKERFILE_PATH: '$(Build.SourcesDirectory)/Dockerfile'
+  TAG: '$(Build.BuildId)'
+  ${{ if eq(parameters['environment'], 'uat') }}:
+    DOCKER_REGISTRY_SERVICE_CONNECTION: $(UAT_DOCKER_REGISTRY_SERVICE_CONNECTION)
+    IMAGE_REPOSITORY: $(UAT_IMAGE_REPOSITORY)
+    CONTAINER_REGISTRY: $(UAT_CONTAINER_REGISTRY)
+    WEBAPP_NAME: $(UAT_WEBAPP_NAME)
+    AZURE_SUBSCRIPTION: $(UAT_AZURE_SUBSCRIPTION)
+  ${{ if eq(parameters['environment'], 'prod') }}:
+    DOCKER_REGISTRY_SERVICE_CONNECTION: $(PROD_DOCKER_REGISTRY_SERVICE_CONNECTION)
+    IMAGE_REPOSITORY: $(PROD_IMAGE_REPOSITORY)
+    CONTAINER_REGISTRY: $(PROD_CONTAINER_REGISTRY)
+    WEBAPP_NAME: $(PROD_WEBAPP_NAME)
+    AZURE_SUBSCRIPTION: $(PROD_AZURE_SUBSCRIPTION)
 
 stages:
-- stage: 'Build_Stage' #Stage name cannot have spaces
-  displayName: 'Build' #Name displayed when viewing in Azure DevOps
+- stage: 'Build'
+  displayName: 'Build'
   jobs:
-  - job: 'Build_Job' #Job name cannot have spaces
-    displayName: 'Application Build' #Name displayed when viewing in Azure DevOps
+  - job: 'Build'
     pool:
-      vmImage: $(AgentImage)
+      vmImage: $(AGENT_IMAGE)
     steps:
     - task: DownloadSecureFile@1
       name: envFile
       inputs:
         secureFile: '.env'
+    - task: DownloadSecureFile@1
+      name: authFile
+      inputs:
+        secureFile: 'auth.json'
     - task: CopyFiles@2
       inputs:
-        contents: "$(envFile.secureFilePath)"
-        targetFolder: "."
-        cleanTargetFolder: true
+        SourceFolder: '$(Agent.TempDirectory)'
+        Contents: '$(envFile.secureFilePath)'
+        TargetFolder: '$(Build.SourcesDirectory)'
+    - task: CopyFiles@2
+      inputs:
+        SourceFolder: '$(Agent.TempDirectory)'
+        Contents: '$(authFile.secureFilePath)'
+        TargetFolder: '$(Build.SourcesDirectory)'
     - task: Docker@2
+      displayName: Build and push an image to container registry
       inputs:
-        containerRegistry: 'ppareg'
-        command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
-    - task: AzureCLI@2
-      displayName: Azure CLI
+        command: buildAndPush
+        repository: '$(IMAGE_REPOSITORY)'
+        dockerfile: '$(DOCKERFILE_PATH)'
+        containerRegistry: '$(DOCKER_REGISTRY_SERVICE_CONNECTION)'
+        tags: |
+          $(TAG)
+
+- stage: 'Deploy_to_${{parameters.environment}}'
+  dependsOn: ['Build']
+  jobs:
+  - job: 'Deploy'
+    pool:
+      vmImage: $(AGENT_IMAGE)
+    steps:
+    - task: AzureWebAppContainer@1
       inputs:
-        azureSubscription: azure
-        scriptType: bash
-        scriptLocation: inlineScript
-        inlineScript: |
-          az --version
-          az account show
-    # - task: CopyFiles@2
-    #   inputs:
-    #     sourceFolder: "public"
-    #     contents: "**"
-    #     targetFolder: "$(Build.ArtifactStagingDirectory)"
-    #     cleanTargetFolder: true
-    #   displayName: "Copy built site"
-    #   condition: succeeded()
-    # - task: PublishBuildArtifacts@1
-    #   inputs:
-    #     PathtoPublish: "$(Build.ArtifactStagingDirectory)"
-    #     ArtifactName: "app"
-    #     publishLocation: "Container"
-    #   condition: succeeded()
-    #   displayName: "Publish Build Artifacts"
-
-# - stage: 'Staging' #Stage name cannot have spaces
-#   displayName: 'Staging' #Name displayed when viewing in Azure DevOps
-#   dependsOn: ['Build_Stage'] #List of previous stages that must complete before this stage runs
-#   jobs:
-#   - deployment: Deploy_Staging
-#     displayName: Staging Deployment
-#     pool:
-#       vmImage: $(AgentImage)
-#     environment: Staging
-#     strategy:
-#       runOnce:
-#         deploy:
-#           steps:
-#           - download: current
-#             artifact: 'app'
-
-# - stage: 'Production'
-#   displayName: 'Production'
-#   dependsOn: ['Build_Stage', 'Staging']
-#   condition: eq(variables['Build.Reason'], 'Manual')
-#   jobs:
-#   - deployment: Deploy_Production
-#     displayName: Production Deployment
-#     pool:
-#       vmImage: $(AgentImage)
-#     environment: Production
-#     strategy:
-#       runOnce:
-#         deploy:
-#           steps:
-#           - download: current
-#             artifact: 'app'
-        
+        appName: $(WEBAPP_NAME)
+        azureSubscription: '$(AZURE_SUBSCRIPTION)'
+        imageName: '$(CONTAINER_REGISTRY)/$(IMAGE_REPOSITORY):$(TAG)'
