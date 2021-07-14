@@ -1,6 +1,6 @@
 {
     "key": "group_60e309895b67a",
-    "title": "CPT fields - Media asset",
+    "title": "CPT fields - Brand asset",
     "fields": [
         {
             "key": "field_60e309c91903b",
@@ -28,7 +28,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "visual-asset"
+                "value": "brand-asset"
             }
         ]
     ],
@@ -44,5 +44,5 @@
     "graphql_field_name": "documentsFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626185736
+    "modified": 1626272542
 }

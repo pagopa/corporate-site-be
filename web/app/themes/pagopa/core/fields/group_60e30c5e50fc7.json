@@ -1,6 +1,6 @@
 {
     "key": "group_60e30c5e50fc7",
-    "title": "New fields",
+    "title": "CPT fields – New fields",
     "fields": [],
     "location": [
         [
@@ -23,5 +23,5 @@
     "graphql_field_name": "newFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1625582439
+    "modified": 1626271360
 }

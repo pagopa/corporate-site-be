@@ -1,9 +1,9 @@
 {
-    "key": "group_60e709fb3c282",
-    "title": "Template fields - Brand assets",
+    "key": "group_60eeeed7a13c7",
+    "title": "Template fields - Media",
     "fields": [
         {
-            "key": "field_60eee4758abe4",
+            "key": "field_60eefe75eb3b9",
             "label": "Intro",
             "name": "intro",
             "type": "clone",
@@ -23,28 +23,6 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
-        },
-        {
-            "key": "field_60eee4c4514e5",
-            "label": "Block - Text",
-            "name": "block_text",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "show_in_graphql": 1,
-            "clone": [
-                "group_60dafca4092fc"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
         }
     ],
     "location": [
@@ -52,7 +30,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "controllers\/brand-assets.php"
+                "value": "controllers\/media.php"
             }
         ]
     ],
@@ -64,9 +42,9 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "show_in_graphql": 0,
-    "graphql_field_name": "visualAssetsTemplateFields",
+    "show_in_graphql": 1,
+    "graphql_field_name": "jobPositionPageFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626272397
+    "modified": 1626275823
 }

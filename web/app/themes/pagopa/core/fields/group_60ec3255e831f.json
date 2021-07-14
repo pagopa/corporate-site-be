@@ -22,7 +22,7 @@
         {
             "key": "field_60ec3cf9eea4a",
             "label": "Carousel fields",
-            "name": "slide",
+            "name": "carousel_fields",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -276,8 +276,8 @@
     "active": true,
     "description": "",
     "show_in_graphql": 1,
-    "graphql_field_name": "flexibleContentProject",
+    "graphql_field_name": "projectCustomFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626254704
+    "modified": 1626274558
 }

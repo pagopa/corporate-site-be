@@ -426,6 +426,21 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "controllers\/brand-assets.php"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "controllers\/media.php"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "controllers\/work-with-us.php"
             }
         ],
         [
@@ -450,5 +465,5 @@
     "graphql_field_name": "flexibleContent",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626183498
+    "modified": 1626276313
 }
