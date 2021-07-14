@@ -37,17 +37,17 @@ RUN apt-get update \
         mysqli
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-# ADD env.sh .
-# RUN ./env.sh
-ADD .env .
 
 # Apache
 RUN a2enmod rewrite \
  && echo "ServerName docker" >> /etc/apache2/apache2.conf
 
 COPY composer.json ./
+ADD .env .
+ADD auth.json .
 RUN set -eux; \
 	composer install --prefer-dist --no-dev --no-scripts --no-progress
+RUN rm .env auth.json
 
 COPY --chown=www-data:www-data . /var/www/html
 WORKDIR /var/www/html
