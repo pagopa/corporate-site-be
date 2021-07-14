@@ -423,24 +423,16 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "page"
-            },
+                "value": "default"
+            }
+        ],
+        [
             {
-                "param": "post_template",
-                "operator": "!=",
-                "value": "controllers\/brand-assets.php"
-            },
-            {
-                "param": "post_template",
-                "operator": "!=",
-                "value": "controllers\/media.php"
-            },
-            {
-                "param": "post_template",
-                "operator": "!=",
-                "value": "controllers\/work-with-us.php"
+                "param": "page_template",
+                "operator": "==",
+                "value": "controllers\/homepage.php"
             }
         ],
         [
@@ -463,7 +455,13 @@
     "description": "",
     "show_in_graphql": 1,
     "graphql_field_name": "flexibleContent",
-    "map_graphql_types_from_location_rules": 0,
-    "graphql_types": "",
-    "modified": 1626276313
+    "map_graphql_types_from_location_rules": 1,
+    "graphql_types": [
+        "Page",
+        "Post",
+        "Project",
+        "DefaultTemplate",
+        "Template_Homepage"
+    ],
+    "modified": 1626278696
 }

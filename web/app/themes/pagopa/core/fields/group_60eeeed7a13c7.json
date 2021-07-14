@@ -43,8 +43,8 @@
     "active": true,
     "description": "",
     "show_in_graphql": 1,
-    "graphql_field_name": "jobPositionPageFields",
+    "graphql_field_name": "MediaPageFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626275823
+    "modified": 1626276806
 }
