@@ -22,3 +22,9 @@ function add_file_types_to_uploads($file_types){
 add_action('upload_mimes', 'add_file_types_to_uploads');
 
 add_filter('jpeg_quality', function($arg){ return 100; });
+
+add_filter( 'acf/fields/wysiwyg/toolbars' , 'my_toolbars'  );
+function my_toolbars( $toolbars ) {
+    array_unshift( $toolbars['Basic'][1], 'removeformat' );
+    return $toolbars;
+}
