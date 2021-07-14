@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_60db102de02f8",
-            "label": "Body",
+            "label": "Layout",
             "name": "body",
             "type": "group",
             "instructions": "",
@@ -15,15 +15,13 @@
                 "class": "",
                 "id": ""
             },
-            "acf_collector_add_field_to_plugin": 1,
-            "acf_collector_is_output_filtered": 1,
             "show_in_graphql": 1,
             "layout": "block",
             "sub_fields": [
                 {
                     "key": "field_60db395536251",
-                    "label": "Body blocks",
-                    "name": "body_blocks",
+                    "label": "",
+                    "name": "blocks",
                     "type": "flexible_content",
                     "instructions": "",
                     "required": 0,
@@ -33,10 +31,226 @@
                         "class": "",
                         "id": ""
                     },
-                    "acf_collector_add_field_to_plugin": 1,
-                    "acf_collector_is_output_filtered": 0,
                     "show_in_graphql": 1,
                     "layouts": {
+                        "layout_60e3095d24e64": {
+                            "key": "layout_60e3095d24e64",
+                            "name": "block_visual_text",
+                            "label": "Block Visual + Text",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60e3096224e65",
+                                    "label": "Block Visual + Text",
+                                    "name": "block_visual_text",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_60e3086ac3eb2"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60db3c2e5e06e": {
+                            "key": "layout_60db3c2e5e06e",
+                            "name": "block_text",
+                            "label": "Block Text",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60db3c475e06f",
+                                    "label": "Block Text",
+                                    "name": "block_text",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_60dafca4092fc"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60e30819094b5": {
+                            "key": "layout_60e30819094b5",
+                            "name": "block_intro",
+                            "label": "Block Intro",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60e30822094b6",
+                                    "label": "Block Intro",
+                                    "name": "block_intro",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_60e3078722c24"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60e6ef7c29a4e": {
+                            "key": "layout_60e6ef7c29a4e",
+                            "name": "block_list",
+                            "label": "Block List",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60e6ef8829a4f",
+                                    "label": "Block list",
+                                    "name": "block_list",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_60e6ed29469b8"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60dc995f39757": {
+                            "key": "layout_60dc995f39757",
+                            "name": "block_visual",
+                            "label": "Block Visual",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60dc997039758",
+                                    "label": "Block Visual",
+                                    "name": "block_visual",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_60dc985f3f702"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60e72b570b049": {
+                            "key": "layout_60e72b570b049",
+                            "name": "useful_links",
+                            "label": "Useful links",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60e72b620b04a",
+                                    "label": "Useful links",
+                                    "name": "useful_links",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "clone": [
+                                        "group_60e72a4acf1d6"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60df372d8b78d": {
+                            "key": "layout_60df372d8b78d",
+                            "name": "project_carousel",
+                            "label": "Projects Carousel",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60df37328b78e",
+                                    "label": "Projects Carousel",
+                                    "name": "project_carousel",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_60df357297765"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
                         "layout_60db39692845e": {
                             "key": "layout_60db39692845e",
                             "name": "hero_slider",
@@ -70,49 +284,16 @@
                             "min": "",
                             "max": ""
                         },
-                        "layout_60db3c2e5e06e": {
-                            "key": "layout_60db3c2e5e06e",
-                            "name": "editorial_box",
-                            "label": "Editorial box",
+                        "layout_60e6f02f2a1b6": {
+                            "key": "layout_60e6f02f2a1b6",
+                            "name": "banner_cta",
+                            "label": "Banner CTA",
                             "display": "block",
                             "sub_fields": [
                                 {
-                                    "key": "field_60db3c475e06f",
-                                    "label": "Editorial box",
-                                    "name": "editorial_box",
-                                    "type": "clone",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "acf_collector_add_field_to_plugin": 0,
-                                    "acf_collector_is_output_filtered": 0,
-                                    "clone": [
-                                        "group_60dafca4092fc"
-                                    ],
-                                    "display": "seamless",
-                                    "layout": "block",
-                                    "prefix_label": 0,
-                                    "prefix_name": 0
-                                }
-                            ],
-                            "min": "",
-                            "max": ""
-                        },
-                        "layout_60dc995f39757": {
-                            "key": "layout_60dc995f39757",
-                            "name": "media_box",
-                            "label": "Media box",
-                            "display": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_60dc997039758",
-                                    "label": "Media Box",
-                                    "name": "media_box",
+                                    "key": "field_60e6f0342a1b7",
+                                    "label": "Banner CTA",
+                                    "name": "banner_cta",
                                     "type": "clone",
                                     "instructions": "",
                                     "required": 0,
@@ -124,7 +305,7 @@
                                     },
                                     "show_in_graphql": 1,
                                     "clone": [
-                                        "group_60dc985f3f702"
+                                        "group_60e6efd0bc012"
                                     ],
                                     "display": "seamless",
                                     "layout": "block",
@@ -135,16 +316,16 @@
                             "min": "",
                             "max": ""
                         },
-                        "layout_60dda03845787": {
-                            "key": "layout_60dda03845787",
-                            "name": "text_big",
-                            "label": "Text big",
+                        "layout_60e6f55c790fa": {
+                            "key": "layout_60e6f55c790fa",
+                            "name": "grid_cta",
+                            "label": "Grid CTA",
                             "display": "block",
                             "sub_fields": [
                                 {
-                                    "key": "field_60dda05845788",
-                                    "label": "Text big",
-                                    "name": "text_big",
+                                    "key": "field_60e6f562790fb",
+                                    "label": "Grid CTA",
+                                    "name": "grid_cta",
                                     "type": "clone",
                                     "instructions": "",
                                     "required": 0,
@@ -156,7 +337,7 @@
                                     },
                                     "show_in_graphql": 1,
                                     "clone": [
-                                        "group_60dd9f088995f"
+                                        "group_60e6f4bc90fff"
                                     ],
                                     "display": "seamless",
                                     "layout": "block",
@@ -167,16 +348,16 @@
                             "min": "",
                             "max": ""
                         },
-                        "layout_60ddb02a1f523": {
-                            "key": "layout_60ddb02a1f523",
-                            "name": "post_list",
-                            "label": "Post list",
+                        "layout_60e700b6b6bb6": {
+                            "key": "layout_60e700b6b6bb6",
+                            "name": "contacts_list_box",
+                            "label": "Contacts list box",
                             "display": "block",
                             "sub_fields": [
                                 {
-                                    "key": "field_60df352e62bf6",
-                                    "label": "Post list",
-                                    "name": "post_list",
+                                    "key": "field_60e700bbb6bb7",
+                                    "label": "Contacts list box",
+                                    "name": "contacts_list_box",
                                     "type": "clone",
                                     "instructions": "",
                                     "required": 0,
@@ -188,7 +369,7 @@
                                     },
                                     "show_in_graphql": 1,
                                     "clone": [
-                                        "group_60df32a36b84d"
+                                        "group_60e7002790396"
                                     ],
                                     "display": "seamless",
                                     "layout": "block",
@@ -199,16 +380,16 @@
                             "min": "",
                             "max": ""
                         },
-                        "layout_60df372d8b78d": {
-                            "key": "layout_60df372d8b78d",
-                            "name": "post_slider",
-                            "label": "Post slider",
+                        "layout_60e70b4523127": {
+                            "key": "layout_60e70b4523127",
+                            "name": "map_box",
+                            "label": "Map box",
                             "display": "block",
                             "sub_fields": [
                                 {
-                                    "key": "field_60df37328b78e",
-                                    "label": "Post slider",
-                                    "name": "post_slider",
+                                    "key": "field_60e70b4a23128",
+                                    "label": "Map box",
+                                    "name": "map_box",
                                     "type": "clone",
                                     "instructions": "",
                                     "required": 0,
@@ -220,71 +401,7 @@
                                     },
                                     "show_in_graphql": 1,
                                     "clone": [
-                                        "group_60df357297765"
-                                    ],
-                                    "display": "seamless",
-                                    "layout": "block",
-                                    "prefix_label": 0,
-                                    "prefix_name": 0
-                                }
-                            ],
-                            "min": "",
-                            "max": ""
-                        },
-                        "layout_60df387f6762f": {
-                            "key": "layout_60df387f6762f",
-                            "name": "box_cta",
-                            "label": "Box CTA",
-                            "display": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_60df388467630",
-                                    "label": "Box CTA",
-                                    "name": "box_cta",
-                                    "type": "clone",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "show_in_graphql": 1,
-                                    "clone": [
-                                        "group_60df37757b135"
-                                    ],
-                                    "display": "seamless",
-                                    "layout": "block",
-                                    "prefix_label": 0,
-                                    "prefix_name": 0
-                                }
-                            ],
-                            "min": "",
-                            "max": ""
-                        },
-                        "layout_60df39baa97b4": {
-                            "key": "layout_60df39baa97b4",
-                            "name": "banner_newsletter",
-                            "label": "Banner newsletter",
-                            "display": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_60df39c8a97b5",
-                                    "label": "Banner newsletter",
-                                    "name": "banner_newsletter",
-                                    "type": "clone",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "show_in_graphql": 1,
-                                    "clone": [
-                                        "group_60df38ae52aa3"
+                                        "group_60e70aa78f909"
                                     ],
                                     "display": "seamless",
                                     "layout": "block",
@@ -296,7 +413,7 @@
                             "max": ""
                         }
                     },
-                    "button_label": "Aggiungi Riga",
+                    "button_label": "Add component",
                     "min": "",
                     "max": ""
                 }
@@ -310,9 +427,16 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 1,
     "position": "normal",
     "style": "seamless",
     "label_placement": "top",
@@ -326,5 +450,5 @@
     "graphql_field_name": "flexibleContent",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1625242106
+    "modified": 1626183498
 }

@@ -19,7 +19,7 @@
             "collapsed": "",
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "layout": "row",
             "button_label": "",
             "sub_fields": [
                 {
@@ -68,5 +68,5 @@
     "graphql_field_name": "pageBackgroundCodes",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1625236984
+    "modified": 1625564782
 }
