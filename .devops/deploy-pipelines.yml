@@ -16,6 +16,7 @@ parameters:
     type: string
     default: uat
     values:
+      - dev
       - uat
       - prod
 
@@ -23,6 +24,12 @@ variables:
   AGENT_IMAGE: "ubuntu-latest"
   DOCKERFILE_PATH: '$(Build.SourcesDirectory)/Dockerfile'
   TAG: '$(Build.BuildId)'
+  ${{ if eq(parameters['environment'], 'dev') }}:
+    DOCKER_REGISTRY_SERVICE_CONNECTION: $(DEV_DOCKER_REGISTRY_SERVICE_CONNECTION)
+    IMAGE_REPOSITORY: $(DEV_IMAGE_REPOSITORY)
+    CONTAINER_REGISTRY: $(DEV_CONTAINER_REGISTRY)
+    WEBAPP_NAME: $(DEV_WEBAPP_NAME)
+    AZURE_SUBSCRIPTION: $(DEV_AZURE_SUBSCRIPTION)
   ${{ if eq(parameters['environment'], 'uat') }}:
     DOCKER_REGISTRY_SERVICE_CONNECTION: $(UAT_DOCKER_REGISTRY_SERVICE_CONNECTION)
     IMAGE_REPOSITORY: $(UAT_IMAGE_REPOSITORY)
