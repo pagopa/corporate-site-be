@@ -92,7 +92,8 @@
     "wpackagist-plugin/svg-support":"dev-trunk",
     "wpackagist-plugin/updraftplus":"dev-trunk",
     "ashhitch/wp-graphql-yoast-seo": "^4.14",
-    "deliciousbrains-plugin/wp-migrate-db-pro": "*"
+    "deliciousbrains-plugin/wp-migrate-db-pro": "*",
+    "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.6.0",
