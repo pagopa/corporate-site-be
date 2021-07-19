@@ -14,7 +14,7 @@ parameters:
   - name: environment
     displayName: Target Environment
     type: string
-    default: uat
+    default: dev
     values:
       - dev
       - uat
