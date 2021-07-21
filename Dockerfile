@@ -38,9 +38,16 @@ RUN apt-get update \
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+# Use the default production configuration
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+
 # Apache
-RUN a2enmod rewrite \
- && echo "ServerName docker" >> /etc/apache2/apache2.conf
+RUN a2enmod rewrite
+RUN { \
+   echo "ServerName docker"; \
+   echo 'EnableMMAP Off'; \
+   echo 'EnableSendfile Off'; \
+} >> /etc/apache2/apache2.conf
 
 COPY composer.json ./
 ADD .env .
