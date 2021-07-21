@@ -50,4 +50,5 @@ RUN set -eux; \
 RUN rm .env auth.json
 
 COPY --chown=www-data:www-data . /var/www/html
+RUN ln -s /home /var/www/html/web/app/uploads
 WORKDIR /var/www/html
