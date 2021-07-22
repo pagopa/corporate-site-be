@@ -33,16 +33,16 @@
                     },
                     "show_in_graphql": 1,
                     "layouts": {
-                        "layout_60e3095d24e64": {
-                            "key": "layout_60e3095d24e64",
-                            "name": "block_visual_text",
-                            "label": "Block Visual + Text",
+                        "layout_60db39692845e": {
+                            "key": "layout_60db39692845e",
+                            "name": "hero_slider",
+                            "label": "Block Hero Slider",
                             "display": "block",
                             "sub_fields": [
                                 {
-                                    "key": "field_60e3096224e65",
-                                    "label": "Block Visual + Text",
-                                    "name": "block_visual_text",
+                                    "key": "field_60db398e36252",
+                                    "label": "Hero slider",
+                                    "name": "hero_slider",
                                     "type": "clone",
                                     "instructions": "",
                                     "required": 0,
@@ -52,39 +52,10 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "acf_collector_add_field_to_plugin": 0,
+                                    "acf_collector_is_output_filtered": 0,
                                     "clone": [
-                                        "group_60e3086ac3eb2"
-                                    ],
-                                    "display": "seamless",
-                                    "layout": "block",
-                                    "prefix_label": 0,
-                                    "prefix_name": 0
-                                }
-                            ],
-                            "min": "",
-                            "max": ""
-                        },
-                        "layout_60db3c2e5e06e": {
-                            "key": "layout_60db3c2e5e06e",
-                            "name": "block_text",
-                            "label": "Block Text",
-                            "display": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_60db3c475e06f",
-                                    "label": "Block Text",
-                                    "name": "block_text",
-                                    "type": "clone",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "clone": [
-                                        "group_60dafca4092fc"
+                                        "group_60daf78e3c555"
                                     ],
                                     "display": "seamless",
                                     "layout": "block",
@@ -126,10 +97,93 @@
                             "min": "",
                             "max": ""
                         },
+                        "layout_60db3c2e5e06e": {
+                            "key": "layout_60db3c2e5e06e",
+                            "name": "block_text",
+                            "label": "Block Text",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60f9670dcae06",
+                                    "label": "Options",
+                                    "name": "options",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_60f962d4b465b"
+                                    ],
+                                    "display": "group",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                },
+                                {
+                                    "key": "field_60db3c475e06f",
+                                    "label": "Block Text",
+                                    "name": "block_text",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_60dafca4092fc"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60e3095d24e64": {
+                            "key": "layout_60e3095d24e64",
+                            "name": "block_visual_text",
+                            "label": "Block Visual + Text",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60e3096224e65",
+                                    "label": "Block Visual + Text",
+                                    "name": "block_visual_text",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_60e3086ac3eb2"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
                         "layout_60e6ef7c29a4e": {
                             "key": "layout_60e6ef7c29a4e",
                             "name": "block_list",
-                            "label": "Block List",
+                            "label": "Block Content List",
                             "display": "block",
                             "sub_fields": [
                                 {
@@ -191,7 +245,7 @@
                         "layout_60e72b570b049": {
                             "key": "layout_60e72b570b049",
                             "name": "useful_links",
-                            "label": "Useful links",
+                            "label": "Block Useful links",
                             "display": "block",
                             "sub_fields": [
                                 {
@@ -223,7 +277,7 @@
                         "layout_60df372d8b78d": {
                             "key": "layout_60df372d8b78d",
                             "name": "project_carousel",
-                            "label": "Projects Carousel",
+                            "label": "Block Projects Carousel",
                             "display": "block",
                             "sub_fields": [
                                 {
@@ -251,43 +305,10 @@
                             "min": "",
                             "max": ""
                         },
-                        "layout_60db39692845e": {
-                            "key": "layout_60db39692845e",
-                            "name": "hero_slider",
-                            "label": "Hero slider",
-                            "display": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_60db398e36252",
-                                    "label": "Hero slider",
-                                    "name": "hero_slider",
-                                    "type": "clone",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "acf_collector_add_field_to_plugin": 0,
-                                    "acf_collector_is_output_filtered": 0,
-                                    "clone": [
-                                        "group_60daf78e3c555"
-                                    ],
-                                    "display": "seamless",
-                                    "layout": "block",
-                                    "prefix_label": 0,
-                                    "prefix_name": 0
-                                }
-                            ],
-                            "min": "",
-                            "max": ""
-                        },
                         "layout_60e6f02f2a1b6": {
                             "key": "layout_60e6f02f2a1b6",
-                            "name": "banner_cta",
-                            "label": "Banner CTA",
+                            "name": "block_banner_cta",
+                            "label": "Block CTA Banner",
                             "display": "block",
                             "sub_fields": [
                                 {
@@ -318,14 +339,14 @@
                         },
                         "layout_60e6f55c790fa": {
                             "key": "layout_60e6f55c790fa",
-                            "name": "grid_cta",
-                            "label": "Grid CTA",
+                            "name": "block_cta_grid",
+                            "label": "Block CTA Grid",
                             "display": "block",
                             "sub_fields": [
                                 {
                                     "key": "field_60e6f562790fb",
-                                    "label": "Grid CTA",
-                                    "name": "grid_cta",
+                                    "label": "Block - CTA Grid",
+                                    "name": "block_cta_grid",
                                     "type": "clone",
                                     "instructions": "",
                                     "required": 0,
@@ -335,7 +356,6 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "show_in_graphql": 1,
                                     "clone": [
                                         "group_60e6f4bc90fff"
                                     ],
@@ -350,14 +370,14 @@
                         },
                         "layout_60e700b6b6bb6": {
                             "key": "layout_60e700b6b6bb6",
-                            "name": "contacts_list_box",
-                            "label": "Contacts list box",
+                            "name": "block_contacts_list",
+                            "label": "Block Contacts list",
                             "display": "block",
                             "sub_fields": [
                                 {
                                     "key": "field_60e700bbb6bb7",
-                                    "label": "Contacts list box",
-                                    "name": "contacts_list_box",
+                                    "label": "Block - Contacts list",
+                                    "name": "block_contacts_list",
                                     "type": "clone",
                                     "instructions": "",
                                     "required": 0,
@@ -367,7 +387,6 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "show_in_graphql": 1,
                                     "clone": [
                                         "group_60e7002790396"
                                     ],
@@ -382,14 +401,14 @@
                         },
                         "layout_60e70b4523127": {
                             "key": "layout_60e70b4523127",
-                            "name": "map_box",
-                            "label": "Map box",
+                            "name": "block_map_box",
+                            "label": "Block Map box",
                             "display": "block",
                             "sub_fields": [
                                 {
                                     "key": "field_60e70b4a23128",
-                                    "label": "Map box",
-                                    "name": "map_box",
+                                    "label": "Block - Map box",
+                                    "name": "block_map_box",
                                     "type": "clone",
                                     "instructions": "",
                                     "required": 0,
@@ -399,7 +418,6 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "show_in_graphql": 1,
                                     "clone": [
                                         "group_60e70aa78f909"
                                     ],
@@ -411,9 +429,104 @@
                             ],
                             "min": "",
                             "max": ""
+                        },
+                        "layout_60f14640b9a4a": {
+                            "key": "layout_60f14640b9a4a",
+                            "name": "block_logo_links",
+                            "label": "Block Logo links",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60f14649b9a4b",
+                                    "label": "Block - Logo links",
+                                    "name": "block_logo_links",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "clone": [
+                                        "group_60f1450b89a95"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60f7e1c0d6b29": {
+                            "key": "layout_60f7e1c0d6b29",
+                            "name": "block_jobs_listing",
+                            "label": "Block Jobs listing",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60f7ed2262ab9",
+                                    "label": "Block - Jobs listing",
+                                    "name": "block_jobs_listing",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "clone": [
+                                        "group_60f7eb895aeae"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_60f95ff9dd857": {
+                            "key": "layout_60f95ff9dd857",
+                            "name": "block_press_release",
+                            "label": "Block Press release",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60f95ffadd858",
+                                    "label": "Block - Press release",
+                                    "name": "block_press_release",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_60f95f9d5ebbf"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
                         }
                     },
-                    "button_label": "Add component",
+                    "button_label": "Add Block",
                     "min": "",
                     "max": ""
                 }
@@ -441,6 +554,13 @@
                 "operator": "==",
                 "value": "project"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "controllers\/work-with-us.php"
+            }
         ]
     ],
     "menu_order": 1,
@@ -461,7 +581,8 @@
         "Post",
         "Project",
         "DefaultTemplate",
-        "Template_Homepage"
+        "Template_Homepage",
+        "Template_WorkWithUs"
     ],
-    "modified": 1626278696
+    "modified": 1626957646
 }

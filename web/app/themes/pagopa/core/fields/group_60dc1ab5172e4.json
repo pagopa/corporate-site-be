@@ -63,7 +63,7 @@
                 },
                 {
                     "key": "field_60df278816d53",
-                    "label": "IT value",
+                    "label": "IT",
                     "name": "it_value",
                     "type": "text",
                     "instructions": "",
@@ -83,7 +83,7 @@
                 },
                 {
                     "key": "field_60eebd9788d19",
-                    "label": "EN value",
+                    "label": "EN",
                     "name": "en_value",
                     "type": "text",
                     "instructions": "",
@@ -414,6 +414,61 @@
                     "ui_off_text": ""
                 }
             ]
+        },
+        {
+            "key": "field_60f1aa031cfb4",
+            "label": "Various",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 0,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60f1aa201cfb5",
+            "label": "Various",
+            "name": "various",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_60f1aa351cfb6",
+                    "label": "Job iframe",
+                    "name": "job_iframe",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -437,5 +492,5 @@
     "graphql_field_name": "globalData",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626258909
+    "modified": 1626450530
 }

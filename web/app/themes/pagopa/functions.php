@@ -26,5 +26,7 @@ add_filter('jpeg_quality', function($arg){ return 100; });
 add_filter( 'acf/fields/wysiwyg/toolbars' , 'my_toolbars'  );
 function my_toolbars( $toolbars ) {
     array_unshift( $toolbars['Basic'][1], 'removeformat' );
+    array_unshift( $toolbars['Basic'][1], 'hr' );
+    array_unshift( $toolbars['Basic'][1], 'formatselect' );
     return $toolbars;
 }

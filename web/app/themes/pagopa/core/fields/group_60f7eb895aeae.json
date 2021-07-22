@@ -1,9 +1,9 @@
 {
-    "key": "group_60e3078722c24",
-    "title": "Block - Intro",
+    "key": "group_60f7eb895aeae",
+    "title": "Block - Jobs listing",
     "fields": [
         {
-            "key": "field_60e3079043369",
+            "key": "field_60f7ec1070f8c",
             "label": "Eyelet",
             "name": "eyelet",
             "type": "text",
@@ -23,7 +23,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_60ed8507cd4e8",
+            "key": "field_60f7eb89afe63",
             "label": "Title",
             "name": "title",
             "type": "text",
@@ -43,7 +43,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_60e307b44336a",
+            "key": "field_60f7ec2270f8d",
             "label": "Text",
             "name": "text",
             "type": "wysiwyg",
@@ -59,14 +59,14 @@
             "default_value": "",
             "tabs": "all",
             "toolbar": "basic",
-            "media_upload": 0,
+            "media_upload": 1,
             "delay": 0
         },
         {
-            "key": "field_60e72c24cb71e",
-            "label": "Image",
-            "name": "image",
-            "type": "image",
+            "key": "field_60f7ec6c70f8e",
+            "label": "Common features",
+            "name": "common_features",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -76,16 +76,53 @@
                 "id": ""
             },
             "show_in_graphql": 1,
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "jpg,png,jpeg"
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add common feature",
+            "sub_fields": [
+                {
+                    "key": "field_60f7ec7970f8f",
+                    "label": "Title",
+                    "name": "feature_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60f7ecc070f90",
+                    "label": "Text",
+                    "name": "feature_text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
+                }
+            ]
         }
     ],
     "location": [
@@ -106,8 +143,8 @@
     "active": false,
     "description": "",
     "show_in_graphql": 1,
-    "graphql_field_name": "editorialIntro",
+    "graphql_field_name": "editorialBox",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626341192
+    "modified": 1626860779
 }
