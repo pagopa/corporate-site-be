@@ -1,12 +1,12 @@
 {
-    "key": "group_60dafca4092fc",
-    "title": "Block - Text",
+    "key": "group_60e6f4bc90fff",
+    "title": "Block - CTA Grid",
     "fields": [
         {
-            "key": "field_60db0df99f469",
-            "label": "Template",
-            "name": "template",
-            "type": "select",
+            "key": "field_60e6f4d2317ab",
+            "label": "Items",
+            "name": "items",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,70 +16,25 @@
                 "id": ""
             },
             "show_in_graphql": 1,
-            "choices": {
-                "default": "Default",
-                "outdented": "Outdented",
-                "centered": "Centered"
-            },
-            "default_value": "default",
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_60e729821493c",
-            "label": "Content",
-            "name": "content",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "show_in_graphql": 1,
-            "layout": "block",
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_60e7234c7c16a",
-                    "label": "Eyelet",
-                    "name": "eyelet",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_graphql": 1,
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_60db0d769f466",
+                    "key": "field_60e6f4ec317ac",
                     "label": "Title",
                     "name": "title",
                     "type": "text",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "acf_collector_add_field_to_plugin": 1,
-                    "acf_collector_is_output_filtered": 1,
                     "show_in_graphql": 1,
                     "default_value": "",
                     "placeholder": "",
@@ -88,10 +43,10 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_60db0dd09f468",
+                    "key": "field_60e6f4f6317ad",
                     "label": "Text",
                     "name": "text",
-                    "type": "wysiwyg",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -102,13 +57,13 @@
                     },
                     "show_in_graphql": 1,
                     "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
-                    "key": "field_60db0ec79f46c",
+                    "key": "field_60e6f504317ae",
                     "label": "Link",
                     "name": "link",
                     "type": "link",
@@ -144,8 +99,8 @@
     "active": false,
     "description": "",
     "show_in_graphql": 1,
-    "graphql_field_name": "editorialBox",
+    "graphql_field_name": "gridCta",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626957750
+    "modified": 1626184398
 }

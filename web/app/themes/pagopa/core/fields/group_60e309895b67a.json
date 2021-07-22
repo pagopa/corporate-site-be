@@ -1,0 +1,48 @@
+{
+    "key": "group_60e309895b67a",
+    "title": "CPT fields - Brand asset",
+    "fields": [
+        {
+            "key": "field_60e309c91903b",
+            "label": "Attachment",
+            "name": "attachment",
+            "type": "file",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "brand-asset"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_graphql": 1,
+    "graphql_field_name": "documentsFields",
+    "map_graphql_types_from_location_rules": 0,
+    "graphql_types": "",
+    "modified": 1626276856
+}

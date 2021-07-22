@@ -63,8 +63,8 @@
                 },
                 {
                     "key": "field_60df278816d53",
-                    "label": "String value",
-                    "name": "string_value",
+                    "label": "IT",
+                    "name": "it_value",
                     "type": "text",
                     "instructions": "",
                     "required": 1,
@@ -74,8 +74,26 @@
                         "class": "",
                         "id": ""
                     },
-                    "acf_collector_add_field_to_plugin": 1,
-                    "acf_collector_is_output_filtered": 1,
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60eebd9788d19",
+                    "label": "EN",
+                    "name": "en_value",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "show_in_graphql": 1,
                     "default_value": "",
                     "placeholder": "",
@@ -84,6 +102,198 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_60ec63cafb0d5",
+            "label": "Newsletter",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 0,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60ec626061059",
+            "label": "Newsletter",
+            "name": "newsletter",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_60ec62956105a",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60ec62c96105b",
+                    "label": "Checkboxes title",
+                    "name": "checkboxes_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60ec63036105c",
+                    "label": "Required fields note",
+                    "name": "required_fields_note",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60ec631a6105d",
+                    "label": "Input placeholder",
+                    "name": "input_placeholder",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60ec63226105e",
+                    "label": "Send button label",
+                    "name": "send_button_label",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60ec63596105f",
+                    "label": "Privacy text",
+                    "name": "privacy_text",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                }
+            ]
+        },
+        {
+            "key": "field_60df2a0da5fc5",
+            "label": "Company data",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60df287c12caa",
+            "label": "Company data",
+            "name": "company_data",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_60df29b4a5fc4",
@@ -151,7 +361,7 @@
                     "key": "field_60df280ea4eb3",
                     "label": "Link",
                     "name": "link",
-                    "type": "url",
+                    "type": "link",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -161,36 +371,53 @@
                         "id": ""
                     },
                     "show_in_graphql": 1,
-                    "default_value": "",
-                    "placeholder": ""
+                    "return_format": "array"
                 },
                 {
-                    "key": "field_60df2821a4eb4",
-                    "label": "Label",
-                    "name": "label",
-                    "type": "text",
+                    "key": "field_60e6d15497201",
+                    "label": "on header",
+                    "name": "onHeader",
+                    "type": "true_false",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "acf_collector_add_field_to_plugin": 1,
-                    "acf_collector_is_output_filtered": 1,
                     "show_in_graphql": 1,
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_60e6d19797202",
+                    "label": "on footer",
+                    "name": "onFooter",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 }
             ]
         },
         {
-            "key": "field_60df2a0da5fc5",
-            "label": "Company data",
+            "key": "field_60f1aa031cfb4",
+            "label": "Various",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -201,15 +428,15 @@
                 "class": "",
                 "id": ""
             },
-            "show_in_graphql": 1,
+            "show_in_graphql": 0,
             "placement": "top",
             "endpoint": 0
         },
         {
-            "key": "field_60df287c12caa",
-            "label": "Company data",
-            "name": "company_data",
-            "type": "wysiwyg",
+            "key": "field_60f1aa201cfb5",
+            "label": "Various",
+            "name": "various",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -219,11 +446,29 @@
                 "id": ""
             },
             "show_in_graphql": 1,
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_60f1aa351cfb6",
+                    "label": "Job iframe",
+                    "name": "job_iframe",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -247,5 +492,5 @@
     "graphql_field_name": "globalData",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1625238059
+    "modified": 1626450530
 }

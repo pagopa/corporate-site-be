@@ -1,11 +1,31 @@
 {
-    "key": "group_60df258f21ef2",
-    "title": "Page background codes",
+    "key": "group_60e72a4acf1d6",
+    "title": "Block - Useful links",
     "fields": [
         {
-            "key": "field_60df25b8a609a",
-            "label": "Codes",
-            "name": "codes",
+            "key": "field_60e72a50e8f0d",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60e72a75e8f0e",
+            "label": "Links",
+            "name": "links",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -19,30 +39,24 @@
             "collapsed": "",
             "min": 0,
             "max": 0,
-            "layout": "row",
+            "layout": "table",
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_60df25c9a609b",
-                    "label": "Code",
-                    "name": "code",
-                    "type": "text",
+                    "key": "field_60e72a88e8f0f",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "acf_collector_add_field_to_plugin": 1,
-                    "acf_collector_is_output_filtered": 1,
                     "show_in_graphql": 1,
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "return_format": "array"
                 }
             ]
         }
@@ -52,21 +66,21 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "page"
+                "value": "post"
             }
         ]
     ],
-    "menu_order": 2,
+    "menu_order": 0,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
-    "show_in_graphql": 1,
-    "graphql_field_name": "pageBackgroundCodes",
+    "show_in_graphql": 0,
+    "graphql_field_name": "usefulLinks",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1625564782
+    "modified": 1626185637
 }

@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71a523851fb2517edb5237b133eef108",
+    "content-hash": "247e20b1e51406d57784685c2ddfdc5f",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
-            "version": "5.9.7",
+            "version": "5.9.8",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%PLUGIN_ACF_KEY}&t=5.9.7"
+                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%PLUGIN_ACF_KEY}&t=5.9.8"
             },
             "require": {
                 "composer/installers": "^1.4",
@@ -725,6 +725,18 @@
                 }
             ],
             "time": "2021-03-25T17:01:18+00:00"
+        },
+        {
+            "name": "deliciousbrains-plugin/wp-migrate-db-pro",
+            "version": "2.0.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-migrate-db-pro&version=2.0.4"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin"
         },
         {
             "name": "ffraenz/private-composer-installer",
@@ -3076,7 +3088,7 @@
         },
         {
             "name": "wpackagist-plugin/easy-wp-smtp",
-            "version": "1.4.6",
+            "version": "1.4.7",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/easy-wp-smtp/",
@@ -3084,7 +3096,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/easy-wp-smtp.zip?timestamp=1615348787"
+                "url": "https://downloads.wordpress.org/plugin/easy-wp-smtp.zip?timestamp=1626162390"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -3110,25 +3122,6 @@
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/svg-support/",
             "time": "2021-06-24T06:10:48+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/updraftplus",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/updraftplus/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/updraftplus.zip?timestamp=1625095068"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/updraftplus/",
-            "time": "2021-06-30T23:17:48+00:00"
         },
         {
             "name": "wpackagist-plugin/windows-azure-storage",
@@ -3169,15 +3162,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-gatsby",
-            "version": "1.0.10",
+            "version": "1.0.11",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-gatsby/",
-                "reference": "tags/1.0.10"
+                "reference": "tags/1.0.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-gatsby.1.0.10.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-gatsby.1.0.11.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -3187,15 +3180,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-graphql",
-            "version": "1.4.3",
+            "version": "1.5.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-graphql/",
-                "reference": "tags/1.4.3"
+                "reference": "tags/1.5.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.4.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.5.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -3267,16 +3260,16 @@
         },
         {
             "name": "yoast/wordpress-seo",
-            "version": "16.6.1",
+            "version": "16.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Yoast-dist/wordpress-seo.git",
-                "reference": "934e73db1194502e2b27ee452249e1bfc5498d2f"
+                "reference": "1483f0fd93c3cfa19b098cd34a69e3cbb10570bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yoast-dist/wordpress-seo/zipball/934e73db1194502e2b27ee452249e1bfc5498d2f",
-                "reference": "934e73db1194502e2b27ee452249e1bfc5498d2f",
+                "url": "https://api.github.com/repos/Yoast-dist/wordpress-seo/zipball/1483f0fd93c3cfa19b098cd34a69e3cbb10570bb",
+                "reference": "1483f0fd93c3cfa19b098cd34a69e3cbb10570bb",
                 "shasum": ""
             },
             "require": {
@@ -3325,7 +3318,7 @@
                 "seo",
                 "wordpress"
             ],
-            "time": "2021-07-01T11:28:45+00:00"
+            "time": "2021-07-13T07:36:40+00:00"
         }
     ],
     "packages-dev": [
@@ -3335,12 +3328,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "1a08d0c7ab47e57fad0d254951a615f07445e91f"
+                "reference": "fc5e5d772af47d035df8178172391259b6e30566"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/1a08d0c7ab47e57fad0d254951a615f07445e91f",
-                "reference": "1a08d0c7ab47e57fad0d254951a615f07445e91f",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/fc5e5d772af47d035df8178172391259b6e30566",
+                "reference": "fc5e5d772af47d035df8178172391259b6e30566",
                 "shasum": ""
             },
             "conflict": {
@@ -3398,6 +3391,7 @@
                 "endroid/qr-code-bundle": "<3.4.2",
                 "enshrined/svg-sanitize": "<0.13.1",
                 "erusev/parsedown": "<1.7.2",
+                "ether/logs": "<3.0.4",
                 "ezsystems/demobundle": ">=5.4,<5.4.6.1",
                 "ezsystems/ez-support-tools": ">=2.2,<2.2.3",
                 "ezsystems/ezdemo-ls-extension": ">=5.4,<5.4.2.1",
@@ -3512,7 +3506,7 @@
                 "phpunit/phpunit": ">=4.8.19,<4.8.28|>=5.0.10,<5.6.3",
                 "phpwhois/phpwhois": "<=4.2.5",
                 "phpxmlrpc/extras": "<0.6.1",
-                "pimcore/pimcore": "<6.8.8",
+                "pimcore/pimcore": "<10.0.7",
                 "pocketmine/pocketmine-mp": "<3.15.4",
                 "pressbooks/pressbooks": "<5.18",
                 "prestashop/autoupgrade": ">=4,<4.10.1",
@@ -3698,7 +3692,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-02T20:02:51+00:00"
+            "time": "2021-07-13T18:03:10+00:00"
         }
     ],
     "aliases": [],
@@ -3709,7 +3703,6 @@
         "wpackagist-plugin/wordpress-seo": 20,
         "wpackagist-plugin/classic-editor": 20,
         "wpackagist-plugin/svg-support": 20,
-        "wpackagist-plugin/updraftplus": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,

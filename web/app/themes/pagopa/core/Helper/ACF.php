@@ -35,7 +35,8 @@ final class ACF
         'menu_title' => $title,
         'menu_slug' => $slug,
         'capability' => $capability,
-        'redirect' => $redirect
+        'redirect' => $redirect,
+        'show_in_graphql' => true
       ]);
     }
   }
