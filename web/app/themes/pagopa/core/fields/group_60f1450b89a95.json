@@ -1,11 +1,31 @@
 {
-    "key": "group_60e6f6a552648",
-    "title": "Template fields - Work With Us",
+    "key": "group_60f1450b89a95",
+    "title": "Block - Logo links",
     "fields": [
         {
-            "key": "field_60e6f6b962115",
-            "label": "Features",
-            "name": "positions_features",
+            "key": "field_60f1451632867",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60f1452d32868",
+            "label": "Items",
+            "name": "items",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -23,10 +43,10 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_60e6f7dd62116",
-                    "label": "Title",
-                    "name": "title",
-                    "type": "text",
+                    "key": "field_60f1454032869",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -36,17 +56,22 @@
                         "id": ""
                     },
                     "show_in_graphql": 1,
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "jpg,jpeg,png,gif,svg"
                 },
                 {
-                    "key": "field_60e6f7ee62117",
-                    "label": "Text",
-                    "name": "text",
-                    "type": "text",
+                    "key": "field_60f1456a3286a",
+                    "label": "Link",
+                    "name": "logo_link",
+                    "type": "url",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -57,10 +82,7 @@
                     },
                     "show_in_graphql": 1,
                     "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "placeholder": ""
                 }
             ]
         }
@@ -68,9 +90,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "controllers\/work-with-us.php"
+                "value": "page"
             }
         ]
     ],
@@ -80,11 +102,11 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_graphql": 1,
-    "graphql_field_name": "jobPositionPageFields",
+    "graphql_field_name": "blockLogoLinks",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626271416
+    "modified": 1626773621
 }
