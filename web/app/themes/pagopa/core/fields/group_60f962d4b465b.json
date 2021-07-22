@@ -21,10 +21,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_60f9645c6b513",
-            "label": "Background graphics",
-            "name": "background_graphics",
-            "type": "repeater",
+            "key": "field_60f976208bc5d",
+            "label": "",
+            "name": "options",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -33,18 +33,14 @@
                 "class": "",
                 "id": ""
             },
-            "show_in_graphql": 0,
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
+            "show_in_graphql": 1,
+            "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_60f964846b514",
-                    "label": "Size (px)",
-                    "name": "size",
-                    "type": "number",
+                    "key": "field_60f965ab6b517",
+                    "label": "Block width",
+                    "name": "block_width",
+                    "type": "select",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -54,19 +50,23 @@
                         "id": ""
                     },
                     "show_in_graphql": 1,
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "min": "",
-                    "max": "",
-                    "step": ""
+                    "choices": {
+                        "standard": "Standard",
+                        "wide": "Wide"
+                    },
+                    "default_value": "standard",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 },
                 {
-                    "key": "field_60f9650b6b515",
-                    "label": "X position (%)",
-                    "name": "xPosition",
-                    "type": "number",
+                    "key": "field_60f975c8e9e76",
+                    "label": "Block position",
+                    "name": "block_position",
+                    "type": "select",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -76,19 +76,24 @@
                         "id": ""
                     },
                     "show_in_graphql": 1,
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "min": "",
-                    "max": "",
-                    "step": ""
+                    "choices": {
+                        "center": "Center",
+                        "left": "Left",
+                        "right": "Right"
+                    },
+                    "default_value": "center",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 },
                 {
-                    "key": "field_60f965206b516",
-                    "label": "Y position (%)",
-                    "name": "yPosition",
-                    "type": "number",
+                    "key": "field_60f9645c6b513",
+                    "label": "Background graphics",
+                    "name": "background_graphics",
+                    "type": "repeater",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -98,38 +103,81 @@
                         "id": ""
                     },
                     "show_in_graphql": 1,
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "min": "",
-                    "max": "",
-                    "step": ""
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_60f964846b514",
+                            "label": "Size (px)",
+                            "name": "size",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_graphql": 1,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        },
+                        {
+                            "key": "field_60f9650b6b515",
+                            "label": "X position (%)",
+                            "name": "xPosition",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_graphql": 1,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        },
+                        {
+                            "key": "field_60f965206b516",
+                            "label": "Y position (%)",
+                            "name": "yPosition",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_graphql": 1,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        }
+                    ]
                 }
             ]
-        },
-        {
-            "key": "field_60f965ab6b517",
-            "label": "Block width",
-            "name": "block_width",
-            "type": "select",
-            "instructions": "standard :  Standard\r\nwide :  Wide",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "show_in_graphql": 0,
-            "choices": [],
-            "default_value": "standard",
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
         }
     ],
     "location": [
@@ -149,9 +197,9 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "show_in_graphql": 0,
+    "show_in_graphql": 1,
     "graphql_field_name": "blockCommonOptions",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626957818
+    "modified": 1626962390
 }
