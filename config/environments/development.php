@@ -27,3 +27,6 @@ if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false)
    $_SERVER['HTTPS']='on';
 else
    $_SERVER['HTTPS']='off';
+
+
+Config::define('GRAPHQL_DEBUG', true);

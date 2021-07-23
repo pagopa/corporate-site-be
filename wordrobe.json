@@ -27,7 +27,8 @@
             "templates": [
                 "homepage",
                 "work-with-us",
-                "visual-assets"
+                "brand-assets",
+                "media"
             ]
         }
     }

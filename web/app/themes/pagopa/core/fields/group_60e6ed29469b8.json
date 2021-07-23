@@ -1,14 +1,14 @@
 {
-    "key": "group_60dafca4092fc",
-    "title": "Block - Text",
+    "key": "group_60e6ed29469b8",
+    "title": "Block - List",
     "fields": [
         {
-            "key": "field_60db0df99f469",
+            "key": "field_60e6ed4d581f0",
             "label": "Template",
             "name": "template",
             "type": "select",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -17,11 +17,10 @@
             },
             "show_in_graphql": 1,
             "choices": {
-                "default": "Default",
-                "outdented": "Outdented",
-                "centered": "Centered"
+                "staggered": "Staggered",
+                "inline": "Inline"
             },
-            "default_value": "default",
+            "default_value": false,
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -30,10 +29,10 @@
             "placeholder": ""
         },
         {
-            "key": "field_60e729821493c",
-            "label": "Content",
-            "name": "content",
-            "type": "group",
+            "key": "field_60e6ed43581ef",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -43,15 +42,64 @@
                 "id": ""
             },
             "show_in_graphql": 1,
-            "layout": "block",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60e6ed85581f1",
+            "label": "Background",
+            "name": "background",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg,png"
+        },
+        {
+            "key": "field_60e6edad581f2",
+            "label": "Items",
+            "name": "items",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_60e7234c7c16a",
-                    "label": "Eyelet",
-                    "name": "eyelet",
-                    "type": "text",
+                    "key": "field_60e6edba581f3",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -59,27 +107,30 @@
                         "id": ""
                     },
                     "show_in_graphql": 1,
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png,svg"
                 },
                 {
-                    "key": "field_60db0d769f466",
+                    "key": "field_60e6ede9581f4",
                     "label": "Title",
                     "name": "title",
                     "type": "text",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "acf_collector_add_field_to_plugin": 1,
-                    "acf_collector_is_output_filtered": 1,
                     "show_in_graphql": 1,
                     "default_value": "",
                     "placeholder": "",
@@ -88,7 +139,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_60db0dd09f468",
+                    "key": "field_60e6ee0d581f5",
                     "label": "Text",
                     "name": "text",
                     "type": "wysiwyg",
@@ -103,25 +154,9 @@
                     "show_in_graphql": 1,
                     "default_value": "",
                     "tabs": "all",
-                    "toolbar": "basic",
+                    "toolbar": "full",
                     "media_upload": 0,
                     "delay": 0
-                },
-                {
-                    "key": "field_60db0ec79f46c",
-                    "label": "Link",
-                    "name": "link",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_graphql": 1,
-                    "return_format": "array"
                 }
             ]
         }
@@ -144,8 +179,8 @@
     "active": false,
     "description": "",
     "show_in_graphql": 1,
-    "graphql_field_name": "editorialBox",
+    "graphql_field_name": "editorialList",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626957750
+    "modified": 1626184367
 }
