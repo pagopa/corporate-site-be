@@ -28,8 +28,34 @@
                 "homepage",
                 "work-with-us",
                 "brand-assets",
-                "media"
+                "media",
+                "press-release"
             ]
+        },
+        "press-release": {
+            "namespace": "PressRelease",
+            "text-domain": "press-release",
+            "post-types": {
+                "post": {
+                    "entity": "",
+                    "has-archive": true
+                },
+                "page": {
+                    "entity": "",
+                    "has-archive": false
+                }
+            },
+            "taxonomies": {
+                "category": {
+                    "post-type": "post",
+                    "hierarchical": true
+                },
+                "tag": {
+                    "post-type": "post",
+                    "hierarchical": false
+                }
+            },
+            "templates": []
         }
     }
 }
