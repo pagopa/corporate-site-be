@@ -45,6 +45,9 @@ variables:
     AZURE_SUBSCRIPTION: $(PROD_AZURE_SUBSCRIPTION)
     AGENT_POOL: $(PROD_AGENT_POOL)
 
+pool:
+  name: $(AGENT_POOL)
+
 stages:
 - stage: 'Build'
   displayName: 'Build'
@@ -85,8 +88,6 @@ stages:
   dependsOn: ['Build']
   jobs:
   - job: 'Deploy'
-    pool:
-      name: $(AGENT_POOL)
     steps:
     - task: AzureWebAppContainer@1
       inputs:
