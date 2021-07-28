@@ -52,3 +52,8 @@ function my_custom_fonts() {
     }
     </style>';
 }
+
+function hide_menu() {
+    remove_menu_page( 'edit-comments.php' ); //Comments
+}
+add_action('admin_head', 'hide_menu');
