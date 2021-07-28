@@ -60,7 +60,7 @@
         },
         {
             "key": "field_60e30dfc89064",
-            "label": "embed_id",
+            "label": "Embed ID",
             "name": "embed_id",
             "type": "text",
             "instructions": "",
@@ -77,6 +77,29 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_61011312801c9",
+            "label": "Application Link",
+            "name": "application_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60e30dfc89064",
+                        "operator": "==empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "return_format": "array"
         },
         {
             "key": "field_60f83f0794164",
@@ -205,5 +228,5 @@
     "graphql_field_name": "jobPositionFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626882508
+    "modified": 1627461010
 }
