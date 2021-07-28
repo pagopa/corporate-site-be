@@ -4,9 +4,9 @@
     "fields": [
         {
             "key": "field_60db0df99f469",
-            "label": "Template",
-            "name": "template",
-            "type": "select",
+            "label": "Is centered",
+            "name": "isCentered",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,18 +16,11 @@
                 "id": ""
             },
             "show_in_graphql": 1,
-            "choices": {
-                "default": "Default",
-                "outdented": "Outdented",
-                "centered": "Centered"
-            },
-            "default_value": "default",
-            "allow_null": 0,
-            "multiple": 0,
+            "message": "",
+            "default_value": 0,
             "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_60e729821493c",
@@ -69,7 +62,7 @@
                     "key": "field_60db0d769f466",
                     "label": "Title",
                     "name": "title",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -78,14 +71,12 @@
                         "class": "",
                         "id": ""
                     },
-                    "acf_collector_add_field_to_plugin": 1,
-                    "acf_collector_is_output_filtered": 1,
                     "show_in_graphql": 1,
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
                 },
                 {
                     "key": "field_60db0dd09f468",
@@ -147,5 +138,5 @@
     "graphql_field_name": "editorialBox",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626957750
+    "modified": 1627382448
 }
