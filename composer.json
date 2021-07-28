@@ -90,8 +90,9 @@
     "yoast/wordpress-seo": "^16.5",
     "wpackagist-plugin/classic-editor":"dev-trunk",
     "wpackagist-plugin/svg-support":"dev-trunk",
-    "ashhitch/wp-graphql-yoast-seo": "^4.14",
+    "wpackagist-plugin/add-wpgraphql-seo":"dev-trunk",
     "deliciousbrains-plugin/wp-migrate-db-pro": "*",
+    "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "*",
     "wpackagist-plugin/user-role-editor": "dev-trunk"
   },
   "require-dev": {
