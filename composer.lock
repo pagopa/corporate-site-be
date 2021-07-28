@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ccdf29d0701d3272d9de93c8ffa61f3",
+    "content-hash": "e9a051b31345567fb5d1c8a0f3cf9369",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -2869,6 +2869,44 @@
             "homepage": "https://wordpress.org/plugins/easy-wp-smtp/"
         },
         {
+            "name": "wpackagist-plugin/members",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/members/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/members.zip?timestamp=1616683925"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/members/",
+            "time": "2021-03-25T14:52:05+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/press-permit-core",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/press-permit-core/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/press-permit-core.zip?timestamp=1627313448"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/press-permit-core/",
+            "time": "2021-07-26T15:30:48+00:00"
+        },
+        {
             "name": "wpackagist-plugin/svg-support",
             "version": "dev-trunk",
             "source": {
@@ -2886,25 +2924,6 @@
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/svg-support/",
             "time": "2021-06-24T06:10:48+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/user-role-editor",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/user-role-editor/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/user-role-editor.zip?timestamp=1626836719"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/user-role-editor/",
-            "time": "2021-07-21T03:05:19+00:00"
         },
         {
             "name": "wpackagist-plugin/windows-azure-storage",
@@ -3546,7 +3565,8 @@
         "wpackagist-plugin/classic-editor": 20,
         "wpackagist-plugin/svg-support": 20,
         "wpackagist-plugin/add-wpgraphql-seo": 20,
-        "wpackagist-plugin/user-role-editor": 20,
+        "wpackagist-plugin/members": 20,
+        "wpackagist-plugin/press-permit-core": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
