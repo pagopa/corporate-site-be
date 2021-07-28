@@ -93,8 +93,7 @@
     "wpackagist-plugin/add-wpgraphql-seo":"dev-trunk",
     "deliciousbrains-plugin/wp-migrate-db-pro": "*",
     "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "*",
-    "wpackagist-plugin/members":"dev-trunk",
-    "wpackagist-plugin/press-permit-core":"dev-trunk"
+    "wpackagist-plugin/members":"dev-trunk"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.6.0",
