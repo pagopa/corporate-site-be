@@ -11,7 +11,7 @@ $autoload->addPsr4('PagoPA\\', __DIR__ . '/core');
 /*===========*/
 add_action('after_setup_theme', '\PagoPA\Theme::init');
 
-function add_file_types_to_uploads($file_types){
+function add_file_types_to_uploads($file_types) {
     $newFileTypes = [];
     $newFileTypes['svg'] = 'image/svg+xml';
     $new_filetypes['svgz'] = 'image/svg+xml';
@@ -19,14 +19,36 @@ function add_file_types_to_uploads($file_types){
     $file_types = array_merge($file_types, $newFileTypes);
     return $file_types;
 }
+
 add_action('upload_mimes', 'add_file_types_to_uploads');
 
-add_filter('jpeg_quality', function($arg){ return 100; });
+add_filter('jpeg_quality', function ($arg) { return 100; });
 
-add_filter( 'acf/fields/wysiwyg/toolbars' , 'my_toolbars'  );
-function my_toolbars( $toolbars ) {
-    array_unshift( $toolbars['Basic'][1], 'removeformat' );
-    array_unshift( $toolbars['Basic'][1], 'hr' );
-    array_unshift( $toolbars['Basic'][1], 'formatselect' );
+add_filter('acf/fields/wysiwyg/toolbars', 'my_toolbars');
+function my_toolbars($toolbars) {
+    array_unshift($toolbars['Basic'][1], 'removeformat');
+    array_unshift($toolbars['Basic'][1], 'hr');
+    array_unshift($toolbars['Basic'][1], 'formatselect');
     return $toolbars;
+}
+
+add_action('admin_head', 'my_custom_fonts');
+
+function my_custom_fonts() {
+    echo '<style>
+    .acf-fields.-border {
+      background: transparent !important;
+    }
+    .acf-flexible-content .layout {
+      margin: 50px 0 0 !important;
+      border: 1px solid #506375 !important;
+      border-radius: 6px;
+    }
+    .acf-flexible-content .layout .acf-fc-layout-order {
+      width: 40px !important;
+      background: #506375 !important;
+      color: #FFF !important;
+      font-weight: 700;
+    }
+    </style>';
 }

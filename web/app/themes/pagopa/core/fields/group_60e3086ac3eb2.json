@@ -69,12 +69,12 @@
                     },
                     "show_in_graphql": 1,
                     "choices": {
-                        "4": "Smaller",
-                        "5": "Half",
-                        "6": "Bigger",
-                        "9": "Full Width"
+                        "small": "Small",
+                        "half": "Half",
+                        "big": "Big",
+                        "full": "Full"
                     },
-                    "default_value": 5,
+                    "default_value": "half",
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
@@ -106,31 +106,6 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "jpg,jpeg,png,svg"
-                },
-                {
-                    "key": "field_60e308ea17eae",
-                    "label": "Background graphics",
-                    "name": "background",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_graphql": 1,
-                    "return_format": "array",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "svg,png"
                 }
             ]
         },
@@ -174,7 +149,7 @@
                     "key": "field_60e3087817eab",
                     "label": "Title",
                     "name": "title",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -186,9 +161,9 @@
                     "show_in_graphql": 1,
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
                 },
                 {
                     "key": "field_60e3089b17eac",
@@ -250,5 +225,5 @@
     "graphql_field_name": "editorialVisualText",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626184376
+    "modified": 1627382393
 }

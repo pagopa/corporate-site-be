@@ -93,6 +93,8 @@
     "ashhitch/wp-graphql-yoast-seo": "^4.14",
     "deliciousbrains-plugin/wp-migrate-db-pro": "*",
     "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "*"
+    "wpackagist-plugin/add-wpgraphql-seo":"dev-trunk",
+    "wpackagist-plugin/user-role-editor": "dev-trunk"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.6.0",
