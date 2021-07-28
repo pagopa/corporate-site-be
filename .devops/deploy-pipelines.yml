@@ -36,12 +36,17 @@ variables:
     CONTAINER_REGISTRY: $(UAT_CONTAINER_REGISTRY)
     WEBAPP_NAME: $(UAT_WEBAPP_NAME)
     AZURE_SUBSCRIPTION: $(UAT_AZURE_SUBSCRIPTION)
+    AGENT_POOL: $(UAT_AGENT_POOL)
   ${{ if eq(parameters['environment'], 'prod') }}:
     DOCKER_REGISTRY_SERVICE_CONNECTION: $(PROD_DOCKER_REGISTRY_SERVICE_CONNECTION)
     IMAGE_REPOSITORY: $(PROD_IMAGE_REPOSITORY)
     CONTAINER_REGISTRY: $(PROD_CONTAINER_REGISTRY)
     WEBAPP_NAME: $(PROD_WEBAPP_NAME)
     AZURE_SUBSCRIPTION: $(PROD_AZURE_SUBSCRIPTION)
+    AGENT_POOL: $(PROD_AGENT_POOL)
+
+pool:
+  name: $(AGENT_POOL)
 
 stages:
 - stage: 'Build'
@@ -83,8 +88,6 @@ stages:
   dependsOn: ['Build']
   jobs:
   - job: 'Deploy'
-    pool:
-      vmImage: $(AGENT_IMAGE)
     steps:
     - task: AzureWebAppContainer@1
       inputs:
