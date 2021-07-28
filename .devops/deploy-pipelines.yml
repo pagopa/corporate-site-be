@@ -1,22 +1,13 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+trigger: none
 
-trigger:
-- master
-
-#Create a unique name for the build based on your project requirements
-#BuildID is the unique ID for the build
 name: $(Year:yy).$(Month).$(DayOfMonth).$(BuildID)-$(SourceBranchName)
 
 parameters:
   - name: environment
     displayName: Target Environment
     type: string
-    default: dev
+    default: uat
     values:
-      - dev
       - uat
       - prod
 
