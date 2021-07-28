@@ -1,6 +1,6 @@
 {
     "key": "group_60e6ed29469b8",
-    "title": "Block - List",
+    "title": "Block - Content List",
     "fields": [
         {
             "key": "field_60e6ed4d581f0",
@@ -116,7 +116,7 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": "png,svg"
+                    "mime_types": "png,svg, jpg, jpeg"
                 },
                 {
                     "key": "field_60e6ede9581f4",
@@ -182,5 +182,5 @@
     "graphql_field_name": "editorialList",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626184367
+    "modified": 1627468173
 }
