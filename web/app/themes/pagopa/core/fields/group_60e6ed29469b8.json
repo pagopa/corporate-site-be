@@ -90,7 +90,7 @@
             "collapsed": "",
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "layout": "block",
             "button_label": "",
             "sub_fields": [
                 {
@@ -102,7 +102,7 @@
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
@@ -124,10 +124,10 @@
                     "name": "title",
                     "type": "text",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "66",
                         "class": "",
                         "id": ""
                     },
@@ -154,7 +154,7 @@
                     "show_in_graphql": 1,
                     "default_value": "",
                     "tabs": "all",
-                    "toolbar": "full",
+                    "toolbar": "basic",
                     "media_upload": 0,
                     "delay": 0
                 }
@@ -182,5 +182,5 @@
     "graphql_field_name": "editorialList",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1627468173
+    "modified": 1627548196
 }
