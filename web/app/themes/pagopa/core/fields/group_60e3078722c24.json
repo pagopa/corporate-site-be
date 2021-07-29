@@ -63,13 +63,41 @@
             "delay": 0
         },
         {
+            "key": "field_61026672b4f37",
+            "label": "Use post featured image",
+            "name": "use_post_featured_image",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_60e72c24cb71e",
             "label": "Image",
             "name": "image",
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61026672b4f37",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -85,7 +113,7 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": "jpg,png,jpeg"
+            "mime_types": "jpg,png,jpeg, svg"
         }
     ],
     "location": [
@@ -109,5 +137,5 @@
     "graphql_field_name": "editorialIntro",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626341192
+    "modified": 1627547316
 }
