@@ -73,6 +73,46 @@
                             "display": "block",
                             "sub_fields": [
                                 {
+                                    "key": "field_6103e21a1059e",
+                                    "label": "",
+                                    "name": "block_options",
+                                    "type": "group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "layout": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6103e2341059f",
+                                            "label": "",
+                                            "name": "",
+                                            "type": "clone",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_graphql": 1,
+                                            "clone": [
+                                                "group_60f962d4b465b"
+                                            ],
+                                            "display": "seamless",
+                                            "layout": "block",
+                                            "prefix_label": 0,
+                                            "prefix_name": 0
+                                        }
+                                    ]
+                                },
+                                {
                                     "key": "field_60e30822094b6",
                                     "label": "Block Intro",
                                     "name": "block_intro",
@@ -122,7 +162,7 @@
                                         {
                                             "key": "field_60f98b55ff18f",
                                             "label": "",
-                                            "name": "options",
+                                            "name": "",
                                             "type": "clone",
                                             "instructions": "",
                                             "required": 0,
@@ -132,7 +172,6 @@
                                                 "class": "",
                                                 "id": ""
                                             },
-                                            "show_in_graphql": 1,
                                             "clone": [
                                                 "group_60f962d4b465b"
                                             ],
@@ -861,27 +900,6 @@
                             "display": "block",
                             "sub_fields": [
                                 {
-                                    "key": "field_60ffbc5890bfa",
-                                    "label": "Block - Accordion",
-                                    "name": "block_accordion",
-                                    "type": "clone",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "clone": [
-                                        "group_60ffbb3a60576"
-                                    ],
-                                    "display": "seamless",
-                                    "layout": "block",
-                                    "prefix_label": 0,
-                                    "prefix_name": 0
-                                },
-                                {
                                     "key": "field_60ffbca090bfb",
                                     "label": "",
                                     "name": "block_options",
@@ -920,6 +938,27 @@
                                             "prefix_name": 0
                                         }
                                     ]
+                                },
+                                {
+                                    "key": "field_60ffbc5890bfa",
+                                    "label": "Block - Accordion",
+                                    "name": "block_accordion",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_60ffbb3a60576"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
                                 }
                             ],
                             "min": "",
@@ -984,5 +1023,5 @@
         "Template_Homepage",
         "Template_WorkWithUs"
     ],
-    "modified": 1627642509
+    "modified": 1627649802
 }
