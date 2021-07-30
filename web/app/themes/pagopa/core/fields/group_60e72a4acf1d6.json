@@ -1,6 +1,6 @@
 {
     "key": "group_60e72a4acf1d6",
-    "title": "Block - Useful links",
+    "title": "Block - Links \/ Attachments",
     "fields": [
         {
             "key": "field_60e72a50e8f0d",
@@ -45,7 +45,7 @@
                 {
                     "key": "field_60e72a88e8f0f",
                     "label": "Link",
-                    "name": "link",
+                    "name": "useful_link",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -57,6 +57,26 @@
                     },
                     "show_in_graphql": 1,
                     "return_format": "array"
+                },
+                {
+                    "key": "field_60fd2f4496c2f",
+                    "label": "Attachment",
+                    "name": "useful_attachment",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
                 }
             ]
         }
@@ -82,5 +102,5 @@
     "graphql_field_name": "usefulLinks",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626185637
+    "modified": 1627642498
 }

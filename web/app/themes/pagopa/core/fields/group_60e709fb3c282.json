@@ -15,31 +15,9 @@
                 "class": "",
                 "id": ""
             },
-            "show_in_graphql": 1,
             "clone": [
-                "group_60e3078722c24"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
-            "key": "field_60eee4c4514e5",
-            "label": "Block - Text",
-            "name": "block_text",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "show_in_graphql": 1,
-            "clone": [
-                "group_60dafca4092fc"
+                "field_60e3079043369",
+                "field_60ed8507cd4e8"
             ],
             "display": "seamless",
             "layout": "block",
@@ -58,15 +36,15 @@
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "show_in_graphql": 0,
-    "graphql_field_name": "visualAssetsTemplateFields",
+    "show_in_graphql": 1,
+    "graphql_field_name": "brandAssetsFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1626272397
+    "modified": 1627642505
 }
