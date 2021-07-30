@@ -14,6 +14,7 @@ Config::define('ACF_JSON_AUTOLOAD', true);
 Config::define('ACF_JSON_AUTOSAVE', true);
 
 ini_set('display_errors', '0');
+set_time_limit(600);
 
 /** Force SSL Connection to Azure Database for MySQL server */
 Config::define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL);
