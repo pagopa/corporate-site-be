@@ -308,7 +308,6 @@
                 "class": "",
                 "id": ""
             },
-            "show_in_graphql": 0,
             "placement": "top",
             "endpoint": 0
         },
@@ -640,7 +639,7 @@
                     "key": "field_6101252f232d5",
                     "label": "Description",
                     "name": "seo_description",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -652,9 +651,9 @@
                     "show_in_graphql": 1,
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": ""
                 },
                 {
                     "key": "field_61012540232d6",
@@ -705,5 +704,5 @@
     "graphql_field_name": "globalData",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1627547139
+    "modified": 1627633237
 }
