@@ -57,3 +57,12 @@ function hide_menu() {
     remove_menu_page( 'edit-comments.php' ); //Comments
 }
 add_action('admin_head', 'hide_menu');
+
+add_filter('acf/settings/save_json', function (): string {
+    return get_stylesheet_directory().'/core/fields';
+}, 10000);
+add_filter('acf/settings/load_json', function (array $paths): array {
+    return array_merge($paths, [
+        get_stylesheet_directory().'/core/fields'
+    ]);
+}, 10000);
