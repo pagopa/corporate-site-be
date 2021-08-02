@@ -123,6 +123,66 @@
                     "new_lines": "br"
                 }
             ]
+        },
+        {
+            "key": "field_61042241a6fbe",
+            "label": "Privacy Disclaimer",
+            "name": "privacy_disclaimer",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "Prima di inviare la candidatura ricorda di leggere la <a href=\"https:\/\/www.pagopa.it\/it\/privacy-policy\/\" target=\"_blank\" rel=\"noopener noreferrer\">Privacy Policy<\/a>",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_6108138b1221d",
+            "label": "Links \/ Attachments",
+            "name": "link_attachments",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6108144f1221f",
+                    "label": "",
+                    "name": "jobs",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "clone": [
+                        "group_60e72a4acf1d6"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 1
+                }
+            ]
         }
     ],
     "location": [
@@ -146,5 +206,5 @@
     "graphql_field_name": "editorialBox",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1627642497
+    "modified": 1627919611
 }
