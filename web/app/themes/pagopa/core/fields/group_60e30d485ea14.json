@@ -62,7 +62,7 @@
             "key": "field_610812cb78870",
             "label": "Open positions",
             "name": "open_positions",
-            "type": "number",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -76,15 +76,13 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "min": "",
-            "max": "",
-            "step": ""
+            "maxlength": ""
         },
         {
             "key": "field_610812f178871",
             "label": "Hired positions",
             "name": "hired_positions",
-            "type": "number",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -98,9 +96,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "min": "",
-            "max": "",
-            "step": ""
+            "maxlength": ""
         },
         {
             "key": "field_6108131178872",
@@ -292,5 +288,5 @@
     "graphql_field_name": "jobPositionFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1627919222
+    "modified": 1628005534
 }
