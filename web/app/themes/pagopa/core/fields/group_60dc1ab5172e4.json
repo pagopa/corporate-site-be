@@ -487,6 +487,26 @@
                     "maxlength": "",
                     "rows": 5,
                     "new_lines": ""
+                },
+                {
+                    "key": "field_61237a7c7a954",
+                    "label": "News & Events Aggregation",
+                    "name": "news_events_aggregation",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 }
             ]
         },
@@ -705,5 +725,5 @@
     "graphql_field_name": "globalData",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1627642505
+    "modified": 1629715139
 }
