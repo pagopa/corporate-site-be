@@ -37,6 +37,27 @@
             },
             "show_in_graphql": 1,
             "return_format": "array"
+        },
+        {
+            "key": "field_6124d46a0150b",
+            "label": "Links and attachments",
+            "name": "links_attachments",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_60e72a75e8f0e"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -60,5 +81,5 @@
     "graphql_field_name": "announcementFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1629737422
+    "modified": 1629803756
 }
