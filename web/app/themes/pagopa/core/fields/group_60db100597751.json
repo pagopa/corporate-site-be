@@ -1007,6 +1007,13 @@
                 "operator": "==",
                 "value": "controllers\/press-release.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "controllers\/announcements.php"
+            }
         ]
     ],
     "menu_order": 1,
@@ -1031,5 +1038,5 @@
         "Template_Homepage",
         "Template_WorkWithUs"
     ],
-    "modified": 1628850781
+    "modified": 1629815518
 }
