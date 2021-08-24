@@ -1000,6 +1000,13 @@
                 "operator": "==",
                 "value": "controllers\/work-with-us.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "controllers\/press-release.php"
+            }
         ]
     ],
     "menu_order": 1,
@@ -1018,10 +1025,11 @@
     "graphql_types": [
         "Page",
         "Post",
+        "PressReleases",
         "Project",
         "DefaultTemplate",
         "Template_Homepage",
         "Template_WorkWithUs"
     ],
-    "modified": 1627649802
+    "modified": 1628850781
 }

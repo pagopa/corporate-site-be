@@ -114,6 +114,26 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "jpg,png,jpeg, svg"
+        },
+        {
+            "key": "field_611554be8a0c4",
+            "label": "Intro menu",
+            "name": "intro_menu",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -137,5 +157,5 @@
     "graphql_field_name": "editorialIntro",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1627642496
+    "modified": 1628788341
 }
