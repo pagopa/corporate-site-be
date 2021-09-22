@@ -106,6 +106,33 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "jpg,jpeg,png,svg"
+                },
+                {
+                    "key": "field_614b0c839416a",
+                    "label": "Caption",
+                    "name": "caption",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60e308ab17ead",
+                                "operator": "!=empty"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -225,5 +252,5 @@
     "graphql_field_name": "editorialVisualText",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1627642500
+    "modified": 1632308411
 }

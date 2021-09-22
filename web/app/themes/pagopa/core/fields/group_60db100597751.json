@@ -893,6 +893,76 @@
                             "min": "",
                             "max": ""
                         },
+                        "layout_6140a6fd17dae": {
+                            "key": "layout_6140a6fd17dae",
+                            "name": "block_media_highlights",
+                            "label": "Block Media highlights",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6140a6fd17daf",
+                                    "label": "",
+                                    "name": "block_options",
+                                    "type": "group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "layout": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6140a6fd17db0",
+                                            "label": "",
+                                            "name": "",
+                                            "type": "clone",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "clone": [
+                                                "group_60f962d4b465b"
+                                            ],
+                                            "display": "seamless",
+                                            "layout": "block",
+                                            "prefix_label": 0,
+                                            "prefix_name": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "field_6140a6fd17db1",
+                                    "label": "Block - Media highlights",
+                                    "name": "block_media_highlights",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_6140a422d3afa"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
                         "layout_60ffbc5890bf9": {
                             "key": "layout_60ffbc5890bf9",
                             "name": "block_accordion",
@@ -1038,5 +1108,5 @@
         "Template_Homepage",
         "Template_WorkWithUs"
     ],
-    "modified": 1629815518
+    "modified": 1631627134
 }

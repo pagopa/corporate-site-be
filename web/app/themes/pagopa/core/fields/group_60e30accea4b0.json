@@ -17,7 +17,7 @@
             },
             "show_in_graphql": 1,
             "display_format": "F j, Y",
-            "return_format": "Ymd",
+            "return_format": "Y-m-d",
             "first_day": 1
         }
     ],
@@ -42,5 +42,5 @@
     "graphql_field_name": "eventField",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1627642501
+    "modified": 1631631408
 }
