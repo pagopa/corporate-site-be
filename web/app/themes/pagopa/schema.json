@@ -40,6 +40,9 @@
         },
         {
             "name": "Announcements"
+        },
+        {
+            "name": "News And Events"
         }
     ],
     "post-type": [],

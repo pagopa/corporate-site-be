@@ -54,11 +54,11 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_graphql": 0,
     "graphql_field_name": "blockPressRelease",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1627642499
+    "modified": 1632821669
 }
