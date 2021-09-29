@@ -893,6 +893,77 @@
                             "min": "",
                             "max": ""
                         },
+                        "layout_6152cec57e19d": {
+                            "key": "layout_6152cec57e19d",
+                            "name": "block_news_events",
+                            "label": "Block News & Events",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6152cf2b7e19f",
+                                    "label": "",
+                                    "name": "block_options",
+                                    "type": "group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "layout": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6152cf467e1a0",
+                                            "label": "",
+                                            "name": "",
+                                            "type": "clone",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_graphql": 1,
+                                            "clone": [
+                                                "group_60f962d4b465b"
+                                            ],
+                                            "display": "seamless",
+                                            "layout": "block",
+                                            "prefix_label": 0,
+                                            "prefix_name": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "field_6152cec57e19e",
+                                    "label": "Block - News & Events",
+                                    "name": "block_news_events",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_6152cafec097b"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
                         "layout_6140a6fd17dae": {
                             "key": "layout_6140a6fd17dae",
                             "name": "block_media_highlights",
@@ -1084,6 +1155,13 @@
                 "operator": "==",
                 "value": "controllers\/announcements.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "controllers\/news-and-events.php"
+            }
         ]
     ],
     "menu_order": 1,
@@ -1108,5 +1186,5 @@
         "Template_Homepage",
         "Template_WorkWithUs"
     ],
-    "modified": 1631627134
+    "modified": 1632836159
 }

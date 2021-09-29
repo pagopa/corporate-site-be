@@ -1,6 +1,6 @@
 {
     "key": "group_60e30accea4b0",
-    "title": "CPT fields - Event",
+    "title": "CPT fields - Event Date Time Venue",
     "fields": [
         {
             "key": "field_60e30b8b9617f",
@@ -19,6 +19,60 @@
             "display_format": "F j, Y",
             "return_format": "Y-m-d",
             "first_day": 1
+        },
+        {
+            "key": "field_6153134629b2e",
+            "label": "Event time start",
+            "name": "event_time_start",
+            "type": "time_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "display_format": "H:i",
+            "return_format": "H:i"
+        },
+        {
+            "key": "field_6153139229b2f",
+            "label": "Event time end",
+            "name": "event_time_end",
+            "type": "time_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "display_format": "H:i",
+            "return_format": "H:i"
+        },
+        {
+            "key": "field_6154325c809c9",
+            "label": "Event venue",
+            "name": "event_venue",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -42,5 +96,5 @@
     "graphql_field_name": "eventField",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1631631408
+    "modified": 1632907933
 }
