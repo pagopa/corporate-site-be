@@ -47,6 +47,8 @@ COPY composer.lock ./
 ADD .env .
 ADD auth.json .
 RUN set -eux; \
+	composer clearcache
+RUN set -eux; \
 	composer install --prefer-dist --no-dev --no-scripts --no-progress
 RUN rm .env auth.json
 
