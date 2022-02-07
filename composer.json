@@ -53,11 +53,11 @@
       "type": "package",
       "package": {
         "name": "wpml/sitepress-multilingual-cms",
-        "version": "4.4.10",
+        "version": "4.5.3",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://wpml.org/it/?download=6088&user_id={%PLUGIN_WPML_USER_ID}&subscription_key={%PLUGIN_WPML_SUBSCRIPTION_KEY}&t=1625564000&version=4.4.10"
+          "url": "https://wpml.org/it/?download=6088&user_id={%PLUGIN_WPML_USER_ID}&subscription_key={%PLUGIN_WPML_SUBSCRIPTION_KEY}&t=1625564000&version=4.5.3"
         },
         "require": {
           "composer/installers": "^1.4",
@@ -85,7 +85,7 @@
     "wpackagist-plugin/windows-azure-storage":"4.3.2",
     "wp-graphql/wp-graphql-acf": "^0.5.2",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
-    "wpml/sitepress-multilingual-cms": "4.4.10",
+    "wpml/sitepress-multilingual-cms": "4.5.3",
     "wpackagist-plugin/wordpress-seo":"16.8",
     "wpackagist-plugin/classic-editor":"1.6",
     "wpackagist-plugin/svg-support":"2.3.19",
