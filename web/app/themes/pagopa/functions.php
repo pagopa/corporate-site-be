@@ -66,3 +66,16 @@ add_filter('acf/settings/load_json', function (array $paths): array {
         get_stylesheet_directory().'/core/fields'
     ]);
 }, 10000);
+
+function custom_menu_locations() {
+    register_nav_menus(
+        array(
+            'intro-menu-1' => __( 'Intro Menu 1' ),
+            'intro-menu-2' => __( 'Intro Menu 2' ),
+            'intro-menu-3' => __( 'Intro Menu 3' ),
+            'intro-menu-4' => __( 'Intro Menu 4' ),
+            'intro-menu-5' => __( 'Intro Menu 5' )
+        )
+    );
+}
+add_action( 'init', 'custom_menu_locations' );
