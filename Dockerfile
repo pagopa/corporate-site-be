@@ -43,7 +43,6 @@ RUN a2enmod rewrite \
  && echo "ServerName docker" >> /etc/apache2/apache2.conf
 
 COPY composer.json ./
-COPY composer.lock ./
 ADD .env .
 ADD auth.json .
 RUN set -eux; \
