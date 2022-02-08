@@ -85,6 +85,13 @@
                 "operator": "==",
                 "value": "innov-announcemt"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "initiative"
+            }
         ]
     ],
     "menu_order": 0,
@@ -101,5 +108,5 @@
     "graphql_field_name": "postConfig",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1630051296
+    "modified": 1644232509
 }
