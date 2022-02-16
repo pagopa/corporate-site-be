@@ -140,7 +140,7 @@
                         "layout_60db3c2e5e06e": {
                             "key": "layout_60db3c2e5e06e",
                             "name": "block_text",
-                            "label": "Block Text",
+                            "label": "Block Text (video option)",
                             "display": "block",
                             "sub_fields": [
                                 {
@@ -1186,5 +1186,5 @@
         "Template_Homepage",
         "Template_WorkWithUs"
     ],
-    "modified": 1632836159
+    "modified": 1644500453
 }

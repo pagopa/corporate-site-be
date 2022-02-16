@@ -133,6 +133,26 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
+                },
+                {
+                    "key": "field_6204ef6e6dea1",
+                    "label": "Youtube video",
+                    "name": "yt_video",
+                    "type": "text",
+                    "instructions": "Video link, adds play button and video modal",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -252,5 +272,5 @@
     "graphql_field_name": "editorialVisualText",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1632308411
+    "modified": 1644490921
 }
