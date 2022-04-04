@@ -1,42 +1,45 @@
 {
-    "key": "group_6200fb1f6b02c",
-    "title": "CPT fields - Initiative",
+    "key": "group_624abb7fe1de2",
+    "title": "CPT fields - University Collaboration",
     "fields": [
         {
-            "key": "field_6200fb1f88980",
-            "label": "Eyelet",
-            "name": "eyelet",
-            "type": "text",
+            "key": "field_624abb80036fc",
+            "label": "Collaboration type title",
+            "name": "collaboration_type",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "show_in_graphql": 1,
-            "default_value": "Iniziative",
+            "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "br"
         },
         {
-            "key": "field_6200fb1f889c3",
-            "label": "Cta",
-            "name": "cta",
-            "type": "link",
+            "key": "field_624abc2346e22",
+            "label": "Is active",
+            "name": "is_active",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "66",
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "show_in_graphql": 1,
-            "return_format": "array"
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -44,7 +47,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "initiative"
+                "value": "uni_collaboration"
             }
         ]
     ],
@@ -57,8 +60,8 @@
     "active": true,
     "description": "",
     "show_in_graphql": 1,
-    "graphql_field_name": "initiativeCommonFields",
+    "graphql_field_name": "collaborationFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1645176744
+    "modified": 1649065045
 }
