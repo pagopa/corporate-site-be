@@ -92,6 +92,20 @@
                 "operator": "==",
                 "value": "initiative"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "newsletter"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "uni_collaboration"
+            }
         ]
     ],
     "menu_order": 0,
@@ -108,5 +122,5 @@
     "graphql_field_name": "postConfig",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1644232509
+    "modified": 1654274739
 }
