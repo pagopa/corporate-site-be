@@ -43,6 +43,9 @@
         },
         {
             "name": "News And Events"
+        },
+        {
+            "name": "Newsletters"
         }
     ],
     "post-type": [],
