@@ -1104,6 +1104,76 @@
                             ],
                             "min": "",
                             "max": ""
+                        },
+                        "layout_624ab8f41ec46": {
+                            "key": "layout_624ab8f41ec46",
+                            "name": "block_university_accordion",
+                            "label": "Block University Accordion",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_624ab8f41ec47",
+                                    "label": "",
+                                    "name": "block_options",
+                                    "type": "group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "layout": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_624ab8f41ec48",
+                                            "label": "",
+                                            "name": "",
+                                            "type": "clone",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "clone": [
+                                                "group_60f962d4b465b"
+                                            ],
+                                            "display": "seamless",
+                                            "layout": "block",
+                                            "prefix_label": 0,
+                                            "prefix_name": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "field_624ab8f41ec49",
+                                    "label": "Block - University Accordion",
+                                    "name": "block_university_accordion",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_624ab837368f2"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
                         }
                     },
                     "button_label": "Add Block",
@@ -1186,5 +1256,5 @@
         "Template_Homepage",
         "Template_WorkWithUs"
     ],
-    "modified": 1644500453
+    "modified": 1649064251
 }

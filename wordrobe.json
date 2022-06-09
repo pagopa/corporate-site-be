@@ -31,7 +31,8 @@
                 "media",
                 "press-release",
                 "announcements",
-                "news-and-events"
+                "news-and-events",
+                "newsletters"
             ]
         },
         "press-release": {

@@ -16,7 +16,7 @@
                 "id": ""
             },
             "show_in_graphql": 1,
-            "default_value": "Event",
+            "default_value": "Eventi",
             "placeholder": "",
             "prepend": "",
             "append": "",
@@ -60,5 +60,5 @@
     "graphql_field_name": "eventCommonFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1632847362
+    "modified": 1645177218
 }

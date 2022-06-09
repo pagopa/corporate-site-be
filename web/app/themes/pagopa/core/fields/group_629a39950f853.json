@@ -1,9 +1,9 @@
 {
-    "key": "group_6200fb1f6b02c",
-    "title": "CPT fields - Initiative",
+    "key": "group_629a39950f853",
+    "title": "CPT fields - Newsletter",
     "fields": [
         {
-            "key": "field_6200fb1f88980",
+            "key": "field_629a399537114",
             "label": "Eyelet",
             "name": "eyelet",
             "type": "text",
@@ -16,14 +16,14 @@
                 "id": ""
             },
             "show_in_graphql": 1,
-            "default_value": "Iniziative",
+            "default_value": "Newsletter",
             "placeholder": "",
             "prepend": "",
             "append": "",
             "maxlength": ""
         },
         {
-            "key": "field_6200fb1f889c3",
+            "key": "field_629a399537171",
             "label": "Cta",
             "name": "cta",
             "type": "link",
@@ -44,7 +44,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "initiative"
+                "value": "newsletter"
             }
         ]
     ],
@@ -57,8 +57,8 @@
     "active": true,
     "description": "",
     "show_in_graphql": 1,
-    "graphql_field_name": "initiativeCommonFields",
+    "graphql_field_name": "newsletterCommonFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1645176744
+    "modified": 1654274517
 }
