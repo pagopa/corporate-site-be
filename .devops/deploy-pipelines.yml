@@ -1,13 +1,5 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+trigger: none
 
-trigger:
-- master
-
-#Create a unique name for the build based on your project requirements
-#BuildID is the unique ID for the build
 name: $(Year:yy).$(Month).$(DayOfMonth).$(BuildID)-$(SourceBranchName)
 
 parameters:
@@ -23,18 +15,29 @@ variables:
   AGENT_IMAGE: "ubuntu-latest"
   DOCKERFILE_PATH: '$(Build.SourcesDirectory)/Dockerfile'
   TAG: '$(Build.BuildId)'
+  ${{ if eq(parameters['environment'], 'dev') }}:
+    DOCKER_REGISTRY_SERVICE_CONNECTION: $(DEV_DOCKER_REGISTRY_SERVICE_CONNECTION)
+    IMAGE_REPOSITORY: $(DEV_IMAGE_REPOSITORY)
+    CONTAINER_REGISTRY: $(DEV_CONTAINER_REGISTRY)
+    WEBAPP_NAME: $(DEV_WEBAPP_NAME)
+    AZURE_SUBSCRIPTION: $(DEV_AZURE_SUBSCRIPTION)
   ${{ if eq(parameters['environment'], 'uat') }}:
     DOCKER_REGISTRY_SERVICE_CONNECTION: $(UAT_DOCKER_REGISTRY_SERVICE_CONNECTION)
     IMAGE_REPOSITORY: $(UAT_IMAGE_REPOSITORY)
     CONTAINER_REGISTRY: $(UAT_CONTAINER_REGISTRY)
     WEBAPP_NAME: $(UAT_WEBAPP_NAME)
     AZURE_SUBSCRIPTION: $(UAT_AZURE_SUBSCRIPTION)
+    AGENT_POOL: $(UAT_AGENT_POOL)
   ${{ if eq(parameters['environment'], 'prod') }}:
     DOCKER_REGISTRY_SERVICE_CONNECTION: $(PROD_DOCKER_REGISTRY_SERVICE_CONNECTION)
     IMAGE_REPOSITORY: $(PROD_IMAGE_REPOSITORY)
     CONTAINER_REGISTRY: $(PROD_CONTAINER_REGISTRY)
     WEBAPP_NAME: $(PROD_WEBAPP_NAME)
     AZURE_SUBSCRIPTION: $(PROD_AZURE_SUBSCRIPTION)
+    AGENT_POOL: $(PROD_AGENT_POOL)
+
+pool:
+  name: $(AGENT_POOL)
 
 stages:
 - stage: 'Build'
@@ -76,8 +79,6 @@ stages:
   dependsOn: ['Build']
   jobs:
   - job: 'Deploy'
-    pool:
-      vmImage: $(AGENT_IMAGE)
     steps:
     - task: AzureWebAppContainer@1
       inputs:

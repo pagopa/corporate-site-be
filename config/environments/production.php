@@ -6,15 +6,14 @@
 use Roots\WPConfig\Config;
 
 Config::define('SAVEQUERIES', true);
-Config::define('WP_DEBUG', true);
+Config::define('WP_DEBUG', false);
 Config::define('WP_DEBUG_DISPLAY', false);
 Config::define('WP_DISABLE_FATAL_ERROR_HANDLER', true);
-Config::define('SCRIPT_DEBUG', true);
+Config::define('SCRIPT_DEBUG', false);
 Config::define('ACF_JSON_AUTOLOAD', true);
 Config::define('ACF_JSON_AUTOSAVE', true);
 
 ini_set('display_errors', '0');
-set_time_limit(600);
 
 /** Force SSL Connection to Azure Database for MySQL server */
 Config::define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL);
