@@ -1670,7 +1670,7 @@
     ],
     "active": true,
     "description": "",
-    "show_in_rest": 0,
+    "show_in_rest": 1,
     "acfe_display_title": "",
     "acfe_autosync": [
         "php",
@@ -1691,5 +1691,5 @@
         "Template_Homepage",
         "Template_WorkWithUs"
     ],
-    "modified": 1668767511
+    "modified": 1668769451
 }

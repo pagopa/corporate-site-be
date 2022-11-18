@@ -51,7 +51,7 @@ acf_add_local_field_group(array(
 	'hide_on_screen' => '',
 	'active' => true,
 	'description' => '',
-	'show_in_rest' => 0,
+	'show_in_rest' => 1,
 	'acfe_display_title' => '',
 	'acfe_autosync' => array(
 		0 => 'php',
@@ -64,7 +64,7 @@ acf_add_local_field_group(array(
 	'graphql_field_name' => 'brandAssetsFields',
 	'map_graphql_types_from_location_rules' => 0,
 	'graphql_types' => '',
-	'modified' => 1668767506,
+	'modified' => 1668769443,
 ));
 
 endif;

@@ -110,7 +110,7 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "show_in_rest": 0,
+    "show_in_rest": 1,
     "acfe_display_title": "",
     "acfe_autosync": [
         "php",
@@ -123,5 +123,5 @@
     "graphql_field_name": "mapBox",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1668767342
+    "modified": 1668769135
 }

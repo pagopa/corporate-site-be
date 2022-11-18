@@ -154,7 +154,7 @@ acf_add_local_field_group(array(
 	),
 	'active' => true,
 	'description' => '',
-	'show_in_rest' => 0,
+	'show_in_rest' => 1,
 	'acfe_display_title' => '',
 	'acfe_autosync' => array(
 		0 => 'php',
@@ -167,7 +167,7 @@ acf_add_local_field_group(array(
 	'graphql_field_name' => 'projectCustomFields',
 	'map_graphql_types_from_location_rules' => 0,
 	'graphql_types' => '',
-	'modified' => 1668767452,
+	'modified' => 1668769305,
 ));
 
 endif;

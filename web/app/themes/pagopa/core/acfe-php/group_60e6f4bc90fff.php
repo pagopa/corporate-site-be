@@ -103,7 +103,7 @@ acf_add_local_field_group(array(
 	'hide_on_screen' => '',
 	'active' => false,
 	'description' => '',
-	'show_in_rest' => 0,
+	'show_in_rest' => 1,
 	'acfe_display_title' => '',
 	'acfe_autosync' => array(
 		0 => 'php',
@@ -116,7 +116,7 @@ acf_add_local_field_group(array(
 	'graphql_field_name' => 'gridCta',
 	'map_graphql_types_from_location_rules' => 0,
 	'graphql_types' => '',
-	'modified' => 1668767263,
+	'modified' => 1668769013,
 ));
 
 endif;

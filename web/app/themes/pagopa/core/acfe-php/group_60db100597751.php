@@ -1677,7 +1677,7 @@ acf_add_local_field_group(array(
 	),
 	'active' => true,
 	'description' => '',
-	'show_in_rest' => 0,
+	'show_in_rest' => 1,
 	'acfe_display_title' => '',
 	'acfe_autosync' => array(
 		0 => 'php',
@@ -1698,7 +1698,7 @@ acf_add_local_field_group(array(
 		5 => 'Template_Homepage',
 		6 => 'Template_WorkWithUs',
 	),
-	'modified' => 1668767511,
+	'modified' => 1668769451,
 ));
 
 endif;
