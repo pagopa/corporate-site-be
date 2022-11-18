@@ -56,9 +56,18 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "php",
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
     "show_in_graphql": 1,
     "graphql_field_name": "pressReleasesFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1627642503
+    "modified": 1668767489
 }

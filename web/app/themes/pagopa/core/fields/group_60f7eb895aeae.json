@@ -120,9 +120,11 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": 2,
-                    "new_lines": "br"
+                    "new_lines": "br",
+                    "acfe_textarea_code": 0
                 }
-            ]
+            ],
+            "acfe_repeater_stylised_button": 0
         },
         {
             "key": "field_61042241a6fbe",
@@ -142,7 +144,8 @@
             "placeholder": "",
             "maxlength": "",
             "rows": 2,
-            "new_lines": ""
+            "new_lines": "",
+            "acfe_textarea_code": 0
         },
         {
             "key": "field_6108138b1221d",
@@ -180,9 +183,19 @@
                     "display": "seamless",
                     "layout": "block",
                     "prefix_label": 0,
-                    "prefix_name": 1
+                    "prefix_name": 1,
+                    "acfe_seamless_style": 0,
+                    "acfe_clone_modal": 0,
+                    "acfe_clone_modal_close": 0,
+                    "acfe_clone_modal_button": "",
+                    "acfe_clone_modal_size": "large"
                 }
-            ]
+            ],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
         }
     ],
     "location": [
@@ -202,9 +215,18 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "php",
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
     "show_in_graphql": 1,
     "graphql_field_name": "editorialBox",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1627919611
+    "modified": 1668767275
 }

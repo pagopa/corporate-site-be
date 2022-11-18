@@ -73,7 +73,8 @@
                     "placeholder": "",
                     "maxlength": 200,
                     "rows": 5,
-                    "new_lines": "br"
+                    "new_lines": "br",
+                    "acfe_textarea_code": 0
                 },
                 {
                     "key": "field_60ec3d6aeea4d",
@@ -98,7 +99,9 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": "svg,png"
+                    "mime_types": "svg,png",
+                    "uploader": "",
+                    "acfe_thumbnail": 0
                 },
                 {
                     "key": "field_60ec3e23eea4e",
@@ -120,7 +123,12 @@
                     "append": "",
                     "maxlength": ""
                 }
-            ]
+            ],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
         }
     ],
     "location": [
@@ -142,9 +150,18 @@
     ],
     "active": true,
     "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "php",
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
     "show_in_graphql": 1,
     "graphql_field_name": "projectCustomFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1627642500
+    "modified": 1668767452
 }

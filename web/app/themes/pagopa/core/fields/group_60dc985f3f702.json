@@ -27,7 +27,9 @@
             "ui": 0,
             "return_format": "value",
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": ""
         },
         {
             "key": "field_60dc986712e50",
@@ -52,7 +54,9 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": "jpg,jpeg,png,svg"
+            "mime_types": "jpg,jpeg,png,svg",
+            "uploader": "",
+            "acfe_thumbnail": 0
         },
         {
             "key": "field_60dc98a012e51",
@@ -99,9 +103,18 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "php",
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
     "show_in_graphql": 1,
     "graphql_field_name": "mediaBox",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1627642500
+    "modified": 1668767377
 }

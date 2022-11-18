@@ -19,7 +19,8 @@
             "placeholder": "",
             "maxlength": "",
             "rows": 2,
-            "new_lines": "br"
+            "new_lines": "br",
+            "acfe_textarea_code": 0
         },
         {
             "key": "field_624abc2346e22",
@@ -59,9 +60,18 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "php",
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
     "show_in_graphql": 1,
     "graphql_field_name": "collaborationFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1649065045
+    "modified": 1668767494
 }
