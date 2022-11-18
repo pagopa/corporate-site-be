@@ -37,7 +37,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.9.8",
+        "version": "5.11",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -85,6 +85,7 @@
     "wpackagist-plugin/windows-azure-storage":"4.3.2",
     "wp-graphql/wp-graphql-acf": "^0.5.2",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "wpackagist-plugin/acf-extended":"0.8.8.10",
     "wpml/sitepress-multilingual-cms": "4.5.3",
     "wpackagist-plugin/wordpress-seo":"16.8",
     "wpackagist-plugin/classic-editor":"1.6",

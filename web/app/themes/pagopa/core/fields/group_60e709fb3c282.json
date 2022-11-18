@@ -22,7 +22,12 @@
             "display": "seamless",
             "layout": "block",
             "prefix_label": 0,
-            "prefix_name": 0
+            "prefix_name": 0,
+            "acfe_seamless_style": 0,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
         }
     ],
     "location": [
@@ -42,9 +47,18 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
+    "show_in_rest": 1,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "php",
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
     "show_in_graphql": 1,
     "graphql_field_name": "brandAssetsFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1627642505
+    "modified": 1668769443
 }

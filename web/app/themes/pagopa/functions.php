@@ -62,10 +62,22 @@ add_filter('acf/settings/save_json', function (): string {
     return get_stylesheet_directory().'/core/fields';
 }, 10000);
 add_filter('acf/settings/load_json', function (array $paths): array {
-    return array_merge($paths, [
+    return [
         get_stylesheet_directory().'/core/fields'
-    ]);
+    ];
 }, 10000);
+
+// load/save php acf path
+add_filter('acfe/settings/php_save', __NAMESPACE__.'\\my_acfe_php_save_point');
+function my_acfe_php_save_point($path){
+    return get_stylesheet_directory() . '/core/acfe-php';
+}
+add_filter('acfe/settings/php_load', __NAMESPACE__.'\\my_acfe_php_load_point');
+function my_acfe_php_load_point($paths){
+    $paths = [get_stylesheet_directory() . '/core/acfe-php'];
+    return $paths;
+}
+
 
 function custom_menu_locations() {
     register_nav_menus(

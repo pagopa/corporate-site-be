@@ -101,7 +101,8 @@
                     "append": "",
                     "maxlength": ""
                 }
-            ]
+            ],
+            "acfe_repeater_stylised_button": 0
         },
         {
             "key": "field_60ec63cafb0d5",
@@ -256,7 +257,12 @@
                     "media_upload": 0,
                     "delay": 0
                 }
-            ]
+            ],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
         },
         {
             "key": "field_60df2a0da5fc5",
@@ -355,7 +361,9 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": "svg"
+                    "mime_types": "svg",
+                    "uploader": "",
+                    "acfe_thumbnail": 0
                 },
                 {
                     "key": "field_60df280ea4eb3",
@@ -413,7 +421,8 @@
                     "ui_on_text": "",
                     "ui_off_text": ""
                 }
-            ]
+            ],
+            "acfe_repeater_stylised_button": 0
         },
         {
             "key": "field_60f1aa031cfb4",
@@ -466,7 +475,8 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": "",
-                    "new_lines": ""
+                    "new_lines": "",
+                    "acfe_textarea_code": 0
                 },
                 {
                     "key": "field_60fecd6d6e82e",
@@ -486,7 +496,8 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": 5,
-                    "new_lines": ""
+                    "new_lines": "",
+                    "acfe_textarea_code": 0
                 },
                 {
                     "key": "field_61237a7c7a954",
@@ -508,7 +519,12 @@
                     "ui_on_text": "",
                     "ui_off_text": ""
                 }
-            ]
+            ],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
         },
         {
             "key": "field_60fee885abb69",
@@ -597,11 +613,18 @@
                             "library": "all",
                             "min_size": "",
                             "max_size": "",
-                            "mime_types": ""
+                            "mime_types": "",
+                            "uploader": ""
                         }
-                    ]
+                    ],
+                    "acfe_repeater_stylised_button": 0
                 }
-            ]
+            ],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
         },
         {
             "key": "field_610124d6232d2",
@@ -699,9 +722,16 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": "jpg,jpeg,png,gif"
+                    "mime_types": "jpg,jpeg,png,gif",
+                    "uploader": "",
+                    "acfe_thumbnail": 0
                 }
-            ]
+            ],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
         }
     ],
     "location": [
@@ -721,9 +751,18 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
+    "show_in_rest": 1,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "php",
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
     "show_in_graphql": 1,
     "graphql_field_name": "globalData",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1629715139
+    "modified": 1668769403
 }

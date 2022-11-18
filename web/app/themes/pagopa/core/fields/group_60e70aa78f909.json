@@ -62,7 +62,8 @@
                     "append": "",
                     "maxlength": ""
                 }
-            ]
+            ],
+            "acfe_repeater_stylised_button": 0
         },
         {
             "key": "field_60e70b117b2e9",
@@ -87,7 +88,9 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": "jpg,jpeg,png"
+            "mime_types": "jpg,jpeg,png",
+            "uploader": "",
+            "acfe_thumbnail": 0
         }
     ],
     "location": [
@@ -107,9 +110,18 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
+    "show_in_rest": 1,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "php",
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
     "show_in_graphql": 1,
     "graphql_field_name": "mapBox",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1627642499
+    "modified": 1668769135
 }
