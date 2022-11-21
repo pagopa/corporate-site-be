@@ -43,7 +43,7 @@ acf_add_local_field_group(array(
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
 	'hide_on_screen' => '',
-	'active' => true,
+	'active' => false,
 	'description' => '',
 	'show_in_rest' => 1,
 	'acfe_display_title' => '',
@@ -58,7 +58,7 @@ acf_add_local_field_group(array(
 	'graphql_field_name' => 'documentsFields',
 	'map_graphql_types_from_location_rules' => 0,
 	'graphql_types' => '',
-	'modified' => 1668769300,
+	'modified' => 1669025339,
 ));
 
 endif;
