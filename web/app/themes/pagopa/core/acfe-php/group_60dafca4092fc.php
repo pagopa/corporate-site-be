@@ -15,7 +15,27 @@ acf_add_local_field_group(array(
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
-				'width' => '',
+				'width' => '30',
+				'class' => '',
+				'id' => '',
+			),
+			'show_in_graphql' => 1,
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
+			'key' => 'field_637bac2b11c74',
+			'label' => 'Reveal mode',
+			'name' => 'reveal_mode',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '30',
 				'class' => '',
 				'id' => '',
 			),
@@ -286,7 +306,7 @@ acf_add_local_field_group(array(
 	'graphql_field_name' => 'editorialBox',
 	'map_graphql_types_from_location_rules' => 0,
 	'graphql_types' => '',
-	'modified' => 1668769239,
+	'modified' => 1669049403,
 ));
 
 endif;
