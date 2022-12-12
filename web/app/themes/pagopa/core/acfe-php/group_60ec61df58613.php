@@ -101,13 +101,6 @@ acf_add_local_field_group(array(
 			array(
 				'param' => 'post_type',
 				'operator' => '==',
-				'value' => 'newsletter',
-			),
-		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
 				'value' => 'uni_collaboration',
 			),
 		),
@@ -135,7 +128,7 @@ acf_add_local_field_group(array(
 	'graphql_field_name' => 'postConfig',
 	'map_graphql_types_from_location_rules' => 0,
 	'graphql_types' => '',
-	'modified' => 1668769437,
+	'modified' => 1670854284,
 ));
 
 endif;
