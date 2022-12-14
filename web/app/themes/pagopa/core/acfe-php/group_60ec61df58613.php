@@ -104,15 +104,20 @@ acf_add_local_field_group(array(
 				'value' => 'uni_collaboration',
 			),
 		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'newsletter',
+			),
+		),
 	),
 	'menu_order' => 0,
 	'position' => 'normal',
 	'style' => 'seamless',
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
-	'hide_on_screen' => array(
-		0 => 'the_content',
-	),
+	'hide_on_screen' => '',
 	'active' => true,
 	'description' => '',
 	'show_in_rest' => 1,
@@ -128,7 +133,7 @@ acf_add_local_field_group(array(
 	'graphql_field_name' => 'postConfig',
 	'map_graphql_types_from_location_rules' => 0,
 	'graphql_types' => '',
-	'modified' => 1670854284,
+	'modified' => 1671024411,
 ));
 
 endif;
