@@ -1,4 +1,4 @@
-FROM php:7.4-apache as php-stage
+FROM php:7.4-apache@sha256:c9d7e608f73832673479770d66aacc8100011ec751d1905ff63fae3fe2e0ca6d as php-stage
 
 ENV APACHE_DOCUMENT_ROOT /var/www/html/web
 
@@ -36,7 +36,7 @@ RUN apt-get update \
 		pcntl \
         mysqli
 
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+COPY --from=composer:latest@sha256:e4ff7e012505df43b4404cf73a4590e06a3f752a7f77d9079a89f770d257eb84 /usr/bin/composer /usr/bin/composer
 
 # Use the default production configuration
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
